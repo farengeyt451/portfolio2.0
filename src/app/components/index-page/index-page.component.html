@@ -1,3 +1,10 @@
 <div class="main" id="gradient">
-  <particles [style]="particleStyles" [params]="particleParams"></particles>
+
+  <div class="main__particle">
+    <particles [style]="particleStyles" [params]="particleParams"></particles>
+  </div>
+
+  <div class="main__home">
+    <router-outlet></router-outlet>
+  </div>
 </div>
