@@ -1,0 +1,80 @@
+@import '~src/common/index'
+
+.nav
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin: 10vh 0 0 auto
+  max-width: 500px
+
+.nav__menu
+  display: flex
+  justify-content: space-between
+  align-items: center
+  flex-grow: 1
+  list-style: none
+
+.nav__link
+  font:
+    family: $font-main
+    weight: $font-light
+    size: 14px
+  color: $light
+  text-transform: uppercase
+  transition: color 0.2s ease-in
+  cursor: pointer
+
+  &:hover
+    color: $third
+
+.hamburger
+  position: relative
+  width: 40px
+  cursor: pointer
+  margin-left: 40px
+
+.hamburger__line
+  display: block
+  width: 40px
+  height: 4px
+  margin: 0 0 0.45em auto
+  background-color: $light
+  transition: 0.25s ease-in-out
+
+  &:nth-child(1)
+    width: 30px
+    transition-delay: 0.25s
+
+  &:nth-child(2)
+    transition-delay: 0.325s
+
+  &:nth-child(3)
+    width: 20px
+    transition-delay: 0.475s
+
+  .hamburger__opened &
+    position: absolute
+    width: 0px
+    top: 10px
+    right: 0
+
+    &:nth-child(1)
+      transform: rotate(45deg)
+      transition-delay: 0s
+
+    &:nth-child(2)
+      transform: rotate(-45deg)
+      transition-delay: 0.25s
+
+    .hamburger--active &
+
+      &:nth-child(1)
+        width: 40px
+        transition-delay: 1s
+
+      &:nth-child(2)
+        width: 40px
+        transition-delay: 1.25s
+
+  .hamburger--active &
+    width: 0

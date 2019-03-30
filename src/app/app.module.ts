@@ -6,9 +6,10 @@ import { ParticlesModule } from 'angular-particle';
 import { AppComponent } from './app.component';
 import { IndexPageComponent } from './components/index-page';
 import { HomeComponent } from './components/home';
+import { NavigationComponent } from './components/navigation';
 
 @NgModule({
-  declarations: [AppComponent, IndexPageComponent, HomeComponent],
+  declarations: [AppComponent, IndexPageComponent, HomeComponent, NavigationComponent],
   imports: [BrowserModule, AppRoutingModule, ParticlesModule],
   providers: [],
   bootstrap: [AppComponent]

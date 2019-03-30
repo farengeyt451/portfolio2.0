@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import 'src/assets/js/gradient.js';
+import { gradient } from 'src/assets/js/gradient.js';
 import { particleParams, particleStyles } from './particle.config';
 
 @Component({
@@ -13,5 +13,7 @@ export class IndexPageComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    gradient();
+  }
 }

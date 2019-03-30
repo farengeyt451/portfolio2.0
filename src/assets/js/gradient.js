@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+export function gradient() {
   var mainContainer = document.getElementById('gradient');
   // rgb vals of the gradients
   var gradients = [
@@ -119,4 +119,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // go go go!
   window.requestAnimationFrame(updateGradient);
-});
+}
