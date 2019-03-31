@@ -13,7 +13,6 @@
   align-items: center
   flex-grow: 1
   list-style: none
-  // opacity: 0
 
 .nav__iem
   opacity: 0
@@ -21,15 +20,19 @@
 .nav__link
   font:
     family: $font-main
-    weight: $font-light
+    weight: $font-regular
     size: 14px
   color: $light
+  text-decoration: none
   text-transform: uppercase
   transition: color 0.2s ease-in
   cursor: pointer
 
   &:hover
     color: $third
+
+.nav__link--active
+  color: $third
 
 .hamburger
   position: relative

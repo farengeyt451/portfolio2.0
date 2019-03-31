@@ -16,6 +16,7 @@
     size: 72px
     weight: $font-light
   line-height: 1.4
+  cursor: default
 
 .home__name
   display: block
@@ -26,3 +27,23 @@
     size: 32px
     family: $font-second
     weight: $font-light
+  margin: 25px 0 0 0
+  cursor: default
+
+.home__more
+  display: inline-block
+  border-radius: 10em
+  padding: 20px 100px
+  margin-top: 25px
+  border-color: transparent
+  background-color: $primary
+  font:
+    size: 18px
+    family: $font-main
+    weight: $font-regular
+  cursor: pointer
+  transition: box-shadow 0.2s, transform 0.15s
+
+  &:hover
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1)
+    transform: translateY(-2px)
