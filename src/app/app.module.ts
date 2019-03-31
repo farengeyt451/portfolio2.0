@@ -3,14 +3,29 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { ParticlesModule } from 'angular-particle';
+import { SwiperModule } from 'ngx-swiper-wrapper';
+
 import { AppComponent } from './app.component';
 import { IndexPageComponent } from './components/index-page';
 import { HomeComponent } from './components/home';
 import { NavigationComponent } from './components/navigation';
+import { PortfolioComponent } from './components/portfolio';
 
 @NgModule({
-  declarations: [AppComponent, IndexPageComponent, HomeComponent, NavigationComponent],
-  imports: [BrowserModule, AppRoutingModule, ParticlesModule, BrowserAnimationsModule],
+  declarations: [
+    AppComponent,
+    IndexPageComponent,
+    HomeComponent,
+    NavigationComponent,
+    PortfolioComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ParticlesModule,
+    BrowserAnimationsModule,
+    SwiperModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

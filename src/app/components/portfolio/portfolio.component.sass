@@ -1,0 +1,50 @@
+@import '~src/common/index'
+
+.portfolio
+  // max-width: 1000px
+  // margin: 0 auto
+  padding: 100px
+  // background-color: #fff
+  // box-shadow: 0 0 100px rgba(0, 0, 0, 0.15)
+
+.slide
+  box-sizing: border-box
+  padding: 60px 25px
+  background-color: $light
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15)
+  border-radius: 5px
+  border: 1px solid #eee
+  font-family: $font-second
+
+.slide__logo
+  display: block
+  max-width: 110px
+  height: auto
+  margin: 40px auto
+
+.slide__name
+  margin: 40px 0
+  color: $text-main
+  font:
+    size: 27px
+    weight: $font-semi-bold
+  line-height: 1.2
+
+.slide__desc
+  margin: 0 auto 40px auto
+  color: $text-main
+  font:
+    family: $font-main
+    size: 18px
+  line-height: 1.4
+
+.slide__link
+  color: $dark
+  opacity: 0.5
+  font-size: 18px
+  text-decoration: none
+
+  &:after
+    content: '→'
+    display: inline-block
+    margin-left: 4px
