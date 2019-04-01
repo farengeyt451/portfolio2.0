@@ -3,6 +3,7 @@ import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 export const swiperConfig: SwiperConfigInterface = {
   direction: 'horizontal',
   // loop: true,
+  resistanceRatio: 0,
   speed: 800,
   slidesPerView: 3,
   spaceBetween: 50,
