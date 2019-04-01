@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+// Swiper config
+.portfolio
+  .swiper-button-prev,
+  .swiper-button-next
+    width: 80px
+    height: 80px
+    background-image: url('/assets/blocks/slider/arrow.png')
+    background-size: 80px 80px
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.05)
+    border-radius: 100%
+    transition: opacity 0.2s, box-shadow 0.2s ease-out
+    z-index: 1
+
+    &:hover
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.15)
+
+  .swiper-button-prev
+    transform: translateY(-25%)
+    left: 0
+
+  .swiper-button-next
+    transform: translateY(-25%) rotate(180deg)
+    right: 0
+
+  .swiper > .swiper.s-wrapper
+    position: static
+
+  .swiper-container
+    position: static
+    padding: 64px 0
+
+  .swiper-slide-next
+    transform: scale(1.15)
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1)
+    z-index: 2
+

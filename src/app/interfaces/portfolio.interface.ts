@@ -4,4 +4,5 @@ export interface Project {
   tags: Array<string>;
   logo: string;
   link: string;
+  year: string;
 }

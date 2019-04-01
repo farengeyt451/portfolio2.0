@@ -1,10 +1,13 @@
-import { SwiperConfigInterface, SwiperNavigationInterface } from 'ngx-swiper-wrapper';
+import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 
 export const swiperConfig: SwiperConfigInterface = {
   direction: 'horizontal',
+  // loop: true,
+  speed: 800,
   slidesPerView: 3,
-  spaceBetween: 40,
+  spaceBetween: 50,
   navigation: true,
+  keyboard: true,
   breakpoints: {
     1200: {
       slidesPerView: 3,
