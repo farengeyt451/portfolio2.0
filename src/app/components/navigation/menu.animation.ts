@@ -1,4 +1,4 @@
-import { animate, state, style, transition, trigger } from '@angular/animations';
+import { state, style, trigger } from '@angular/animations';
 
 export const toggleMenu = trigger('toggleMenu', [
   state(
@@ -14,6 +14,5 @@ export const toggleMenu = trigger('toggleMenu', [
       opacity: 1,
       transform: 'translateX(0)'
     })
-  ),
-  transition('* <=> *', animate('200ms 100ms'))
+  )
 ]);

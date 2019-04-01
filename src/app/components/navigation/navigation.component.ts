@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, Renderer2 } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 import { toggleMenu } from './menu.animation';
 
 @Component({
@@ -10,7 +10,7 @@ import { toggleMenu } from './menu.animation';
 export class NavigationComponent implements OnInit {
   menuState: string = 'opened';
 
-  constructor(private Renderer2: Renderer2, private el: ElementRef) {}
+  constructor(private Renderer2: Renderer2) {}
 
   ngOnInit() {}
 

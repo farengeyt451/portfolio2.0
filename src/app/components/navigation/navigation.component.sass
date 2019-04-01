@@ -16,6 +16,11 @@
 
 .nav__iem
   opacity: 0
+  transition: opacity 0.2s, transform 0.2s
+
+  @for $i from 1 through 4
+    &:nth-child(#{$i})
+      transition-delay: #{$i * 0.1}s
 
 .nav__link
   font:
