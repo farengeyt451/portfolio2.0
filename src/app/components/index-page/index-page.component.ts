@@ -14,6 +14,6 @@ export class IndexPageComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    // gradient();
+    gradient();
   }
 }
