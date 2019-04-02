@@ -10,6 +10,7 @@ import { IndexPageComponent } from './components/index-page';
 import { HomeComponent } from './components/home';
 import { NavigationComponent } from './components/navigation';
 import { PortfolioComponent } from './components/portfolio';
+import { SkillsComponent } from './components/skills';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PortfolioComponent } from './components/portfolio';
     IndexPageComponent,
     HomeComponent,
     NavigationComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,
