@@ -9,7 +9,7 @@ export const projects = [
   },
   {
     name: 'Air Tickets Page',
-    description: 'Air Tickets Page — dynamic page for tickets pick, powered by Angular',
+    description: 'Air Tickets Page — dynamic page for tickets pick, made with Angular',
     tags: ['html5', 'css3', 'js', 'pug', 'sass'],
     logo: '/assets/blocks/portfolio/air-tickets-page.svg',
     link: 'https://alexander-kislov.github.io/air-tickets-page/',
