@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SkillsComponent implements OnInit {
   tippyOptions = {
+    placement: 'top',
     arrow: true,
     animation: 'shift-toward',
     theme: 'skill'

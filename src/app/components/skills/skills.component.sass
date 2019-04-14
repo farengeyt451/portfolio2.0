@@ -6,16 +6,16 @@
 
 .skills__heading
   margin: 50px 0
-  color: $light
+  color: $primary
   font:
     family: $font-main
-    size: 36px
+    size: 24px
 
 .skills__item
   display: inline-block
   width: 60px
   height: 60px
-  margin-left: 30px
+  // margin-left: 30px
   padding: 30px
   background-color: rgba(100%, 100%, 100%, 0.5)
   border-radius: 50%
@@ -26,3 +26,19 @@
 .skills__img
   width: 100%
   height: 100%
+
+.skill__card
+  position: relative
+  z-index: 1
+  margin: 40px 0
+  display: inline-flex
+  flex-direction: column
+  justify-content: flex-start
+  padding: 20px 100px 20px 100px
+  background-color: #fff
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15)
+  border-radius: 5px
+  border: 1px solid #eee
+  font-family: "OpenSans", sans-serif
+  transition: transform 0.4s ease-in-out
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out
