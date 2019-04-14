@@ -22,6 +22,7 @@
     "@angular/router": "~7.2.0",
     "angular-particle": "^1.0.4",
     "core-js": "^2.5.4",
+    "ng-tippy": "^3.2.2",
     "ngx-swiper-wrapper": "^7.2.1",
     "normalize.css": "^8.0.1",
     "rxjs": "~6.3.3",

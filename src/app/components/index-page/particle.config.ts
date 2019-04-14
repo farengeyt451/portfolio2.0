@@ -14,8 +14,8 @@ export const particleParams = {
     number: {
       value: 80,
       density: {
-        enable: false,
-        value_area: 2000
+        enable: true,
+        value_area: 1500
       }
     },
     color: {

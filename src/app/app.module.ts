@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { ParticlesModule } from 'angular-particle';
 import { SwiperModule } from 'ngx-swiper-wrapper';
+import { TippyModule } from 'ng-tippy';
 
 import { AppComponent } from './app.component';
 import { IndexPageComponent } from './components/index-page';
@@ -26,7 +27,8 @@ import { SkillsComponent } from './components/skills';
     AppRoutingModule,
     ParticlesModule,
     BrowserAnimationsModule,
-    SwiperModule
+    SwiperModule,
+    TippyModule
   ],
   providers: [],
   bootstrap: [AppComponent]
