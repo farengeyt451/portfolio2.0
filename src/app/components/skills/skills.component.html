@@ -1,5 +1,12 @@
 <div class="skills">
-  <h2 class="skills__heading">Basic Stack</h2>
+
+  <ng-container *ngFor="let skill of skills">
+    <div class="skills__item skills__item--marginless" title="skill.skillLevel" appTippy [tippyOptions]="tippyOptions">
+      <img class="skills__img" [src]="skill.logo" [alt]="skill.skillName">
+    </div>
+  </ng-container>
+
+  <!-- <h2 class="skills__heading">Basic Stack</h2>
   <div class="skills__item skills__item--marginless" title="Good knowledge of HTML5" appTippy [tippyOptions]="tippyOptions">
     <img class="skills__img" src="/assets/blocks/skills/html5.svg" alt="html5">
   </div>
@@ -12,13 +19,9 @@
     <img class="skills__img" src="/assets/blocks/skills/js.svg" alt="js">
   </div>
 
-  <h2 class="skills__heading">Package managers</h2>
-  <div class="skills__item skills__item--marginless" title="Knowledge of npm" appTippy [tippyOptions]="tippyOptions">
-    <img class="skills__img" src="/assets/blocks/skills/npm.svg" alt="html5">
-  </div>
-
-  <div class="skills__item" title="Knowledge of yarn" appTippy [tippyOptions]="tippyOptions">
-    <img class="skills__img" src="/assets/blocks/skills/yarn.svg" alt="css3">
+  <h2 class="skills__heading">HTML preprocessors</h2>
+  <div class="skills__item" title="Worked with Stylus" appTippy [tippyOptions]="tippyOptions">
+    <img class="skills__img" src="/assets/blocks/skills/pug.svg" alt="css3">
   </div>
 
   <h2 class="skills__heading">CSS preprocessors</h2>
@@ -29,9 +32,19 @@
   <div class="skills__item" title="Worked with Stylus" appTippy [tippyOptions]="tippyOptions">
     <img class="skills__img" src="/assets/blocks/skills/stylus.svg" alt="css3">
   </div>
+
+  <h2 class="skills__heading">Package managers</h2>
+  <div class="skills__item skills__item--marginless" title="Knowledge of npm" appTippy [tippyOptions]="tippyOptions">
+    <img class="skills__img" src="/assets/blocks/skills/npm.svg" alt="html5">
+  </div>
+
+  <div class="skills__item" title="Knowledge of yarn" appTippy [tippyOptions]="tippyOptions">
+    <img class="skills__img" src="/assets/blocks/skills/yarn.svg" alt="css3">
+  </div> -->
+
 </div>
 
-<div class="skill__card">
+<!-- <div class="skill__card">
   <h2 class="skills__heading">Basic Stack</h2>
   <div class="skills__item skills__item--marginless" title="Good knowledge of HTML5" appTippy [tippyOptions]="tippyOptions">
     <img class="skills__img" src="/assets/blocks/skills/html5.svg" alt="html5">
@@ -45,3 +58,26 @@
     <img class="skills__img" src="/assets/blocks/skills/js.svg" alt="js">
   </div>
 </div>
+
+<div class="skill__card" style="margin-left: 60px">
+  <h2 class="skills__heading">CSS</h2>
+  <div class="skills__item skills__item--marginless" title="Good knowledge of HTML5" appTippy [tippyOptions]="tippyOptions">
+    <img class="skills__img" src="/assets/blocks/skills/sass.svg" alt="html5">
+  </div>
+
+  <div class="skills__item" title="Good knowledge of CSS3" appTippy [tippyOptions]="tippyOptions">
+    <img class="skills__img" src="/assets/blocks/skills/stylus.svg" alt="css3">
+  </div>
+
+  <div class="skills__item" title="Average knowledge of JS (ES5, ES6)" appTippy [tippyOptions]="tippyOptions">
+    <img class="skills__img" src="/assets/blocks/skills/bootstrap.svg" alt="js">
+  </div>
+</div>
+
+<div class="skill__card" style="margin-left: 60px">
+  <h2 class="skills__heading">HTML</h2>
+  <div class="skills__item skills__item--marginless" title="Good knowledge of HTML5" appTippy [tippyOptions]="tippyOptions">
+    <img class="skills__img" src="/assets/blocks/skills/pug.svg" alt="html5">
+  </div>
+
+</div> -->
