@@ -1,83 +1,141 @@
 <div class="skills">
 
-  <ng-container *ngFor="let skill of skills">
-    <div class="skills__item skills__item--marginless" title="skill.skillLevel" appTippy [tippyOptions]="tippyOptions">
-      <img class="skills__img" [src]="skill.logo" [alt]="skill.skillName">
-    </div>
-  </ng-container>
+  <mat-tab-group mat-align-tabs="center">
 
-  <!-- <h2 class="skills__heading">Basic Stack</h2>
-  <div class="skills__item skills__item--marginless" title="Good knowledge of HTML5" appTippy [tippyOptions]="tippyOptions">
-    <img class="skills__img" src="/assets/blocks/skills/html5.svg" alt="html5">
-  </div>
+    <mat-tab>
+      <ng-template mat-tab-label>
+          <span class="skill__tab skill__tab--upper">html</span>
+      </ng-template>
+      <ng-template matTabContent>
+        <div class="skill__content">
+          <div class="skills__item" title="HTML5" appTippy [tippyOptions]="tippyOptions">
+            <img class="skills__img" src="/assets/blocks/skills/html5.svg" alt="html5">
+          </div>
+          <div class="skills__item" title="Pug" appTippy [tippyOptions]="tippyOptions">
+            <img class="skills__img" src="/assets/blocks/skills/pug.svg" alt="pug">
+          </div>
+        </div>
+      </ng-template>
+    </mat-tab>
 
-  <div class="skills__item" title="Good knowledge of CSS3" appTippy [tippyOptions]="tippyOptions">
-    <img class="skills__img" src="/assets/blocks/skills/css3.svg" alt="css3">
-  </div>
+    <mat-tab>
+      <ng-template mat-tab-label>
+          <span class="skill__tab skill__tab--upper">css</span>
+      </ng-template>
+      <ng-template matTabContent>
+        <div class="skill__content">
+          <div class="skills__item" title="CSS3" appTippy [tippyOptions]="tippyOptions">
+            <img class="skills__img" src="/assets/blocks/skills/css3.svg" alt="css3">
+          </div>
+          <div class="skills__item" title="SASS" appTippy [tippyOptions]="tippyOptions">
+            <img class="skills__img" src="/assets/blocks/skills/sass.svg" alt="sass">
+          </div>
+          <div class="skills__item" title="Stylus" appTippy [tippyOptions]="tippyOptions">
+            <img class="skills__img" src="/assets/blocks/skills/stylus.svg" alt="stylus">
+          </div>
+          <div class="skills__item" title="Bootstrap" appTippy [tippyOptions]="tippyOptions">
+            <img class="skills__img" src="/assets/blocks/skills/bootstrap.svg" alt="bootstrap">
+          </div>
+        </div>
+      </ng-template>
+    </mat-tab>
 
-  <div class="skills__item" title="Average knowledge of JS (ES5, ES6)" appTippy [tippyOptions]="tippyOptions">
-    <img class="skills__img" src="/assets/blocks/skills/js.svg" alt="js">
-  </div>
+    <mat-tab>
+      <ng-template mat-tab-label>
+          <span class="skill__tab">JavaScript</span>
+      </ng-template>
+      <ng-template matTabContent>
+        <div class="skill__content">
+          <div class="skills__item" title="JS (ES5, ES6)" appTippy [tippyOptions]="tippyOptions">
+            <img class="skills__img" src="/assets/blocks/skills/js.svg" alt="js">
+          </div>
+          <div class="skills__item" title="Angular" appTippy [tippyOptions]="tippyOptions">
+            <img class="skills__img" src="/assets/blocks/skills/angular.svg" alt="angular">
+          </div>
+          <div class="skills__item" title="TypeScript" appTippy [tippyOptions]="tippyOptions">
+            <img class="skills__img" src="/assets/blocks/skills/ts.svg" alt="typescript">
+          </div>
+          <div class="skills__item" title="RXJS" appTippy [tippyOptions]="tippyOptions">
+            <img class="skills__img" src="/assets/blocks/skills/rxjs.svg" alt="rxjs">
+          </div>
+          <div class="skills__item" title="jQuery" appTippy [tippyOptions]="tippyOptions">
+            <img class="skills__img" src="/assets/blocks/skills/jquery.svg" alt="jquery">
+          </div>
+        </div>
+      </ng-template>
+    </mat-tab>
 
-  <h2 class="skills__heading">HTML preprocessors</h2>
-  <div class="skills__item" title="Worked with Stylus" appTippy [tippyOptions]="tippyOptions">
-    <img class="skills__img" src="/assets/blocks/skills/pug.svg" alt="css3">
-  </div>
+    <mat-tab>
+      <ng-template mat-tab-label>
+          <span class="skill__tab">Build Tools</span>
+      </ng-template>
+      <ng-template matTabContent>
+        <div class="skill__content">
+          <div class="skills__item" title="Webpack" appTippy [tippyOptions]="tippyOptions">
+            <img class="skills__img" src="/assets/blocks/skills/webpack.svg" alt="webpack">
+          </div>
+          <div class="skills__item" title="Gulp" appTippy [tippyOptions]="tippyOptions">
+            <img class="skills__img" src="/assets/blocks/skills/gulp.svg" alt="gulp">
+          </div>
+        </div>
+      </ng-template>
+    </mat-tab>
 
-  <h2 class="skills__heading">CSS preprocessors</h2>
-  <div class="skills__item skills__item--marginless" title="Good knowledge of SASS" appTippy [tippyOptions]="tippyOptions">
-    <img class="skills__img" src="/assets/blocks/skills/sass.svg" alt="html5">
-  </div>
+    <mat-tab>
+      <ng-template mat-tab-label>
+          <span class="skill__tab">Package Managers</span>
+      </ng-template>
+      <ng-template matTabContent>
+        <div class="skill__content">
+          <div class="skills__item" title="NPM" appTippy [tippyOptions]="tippyOptions">
+            <img class="skills__img" src="/assets/blocks/skills/npm.svg" alt="npm">
+          </div>
+          <div class="skills__item" title="Yarn" appTippy [tippyOptions]="tippyOptions">
+            <img class="skills__img" src="/assets/blocks/skills/yarn.svg" alt="yarn">
+          </div>
+        </div>
+      </ng-template>
+    </mat-tab>
 
-  <div class="skills__item" title="Worked with Stylus" appTippy [tippyOptions]="tippyOptions">
-    <img class="skills__img" src="/assets/blocks/skills/stylus.svg" alt="css3">
-  </div>
+    <mat-tab>
+      <ng-template mat-tab-label>
+          <span class="skill__tab">VSC and Hubs</span>
+      </ng-template>
+      <ng-template matTabContent>
+        <div class="skill__content">
+          <div class="skills__item" title="Git" appTippy [tippyOptions]="tippyOptions">
+            <img class="skills__img" src="/assets/blocks/skills/git.svg" alt="git">
+          </div>
+          <div class="skills__item" title="GitHub" appTippy [tippyOptions]="tippyOptions">
+            <img class="skills__img" src="/assets/blocks/skills/github.svg" alt="github">
+          </div>
+          <div class="skills__item" title="GitLab" appTippy [tippyOptions]="tippyOptions">
+            <img class="skills__img" src="/assets/blocks/skills/gitlab.svg" alt="gitlab">
+          </div>
+        </div>
+      </ng-template>
+    </mat-tab>
 
-  <h2 class="skills__heading">Package managers</h2>
-  <div class="skills__item skills__item--marginless" title="Knowledge of npm" appTippy [tippyOptions]="tippyOptions">
-    <img class="skills__img" src="/assets/blocks/skills/npm.svg" alt="html5">
-  </div>
-
-  <div class="skills__item" title="Knowledge of yarn" appTippy [tippyOptions]="tippyOptions">
-    <img class="skills__img" src="/assets/blocks/skills/yarn.svg" alt="css3">
-  </div> -->
-
+    <mat-tab>
+      <ng-template mat-tab-label>
+          <span class="skill__tab">Apps</span>
+      </ng-template>
+      <ng-template matTabContent>
+        <div class="skill__content">
+          <div class="skills__item" title="Visual Studio Code" appTippy [tippyOptions]="tippyOptions">
+            <img class="skills__img" src="/assets/blocks/skills/vsc.svg" alt="vsc">
+          </div>
+          <div class="skills__item" title="Adobe Photoshop" appTippy [tippyOptions]="tippyOptions">
+            <img class="skills__img" src="/assets/blocks/skills/ps.svg" alt="ps">
+          </div>
+          <div class="skills__item" title="Inkscape" appTippy [tippyOptions]="tippyOptions">
+            <img class="skills__img" src="/assets/blocks/skills/inkscape.svg" alt="inkscape">
+          </div>
+          <div class="skills__item" title="Avocode" appTippy [tippyOptions]="tippyOptions">
+            <img class="skills__img" src="/assets/blocks/skills/avocode.svg" alt="avocode">
+          </div>
+        </div>
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
 </div>
-
-<!-- <div class="skill__card">
-  <h2 class="skills__heading">Basic Stack</h2>
-  <div class="skills__item skills__item--marginless" title="Good knowledge of HTML5" appTippy [tippyOptions]="tippyOptions">
-    <img class="skills__img" src="/assets/blocks/skills/html5.svg" alt="html5">
-  </div>
-
-  <div class="skills__item" title="Good knowledge of CSS3" appTippy [tippyOptions]="tippyOptions">
-    <img class="skills__img" src="/assets/blocks/skills/css3.svg" alt="css3">
-  </div>
-
-  <div class="skills__item" title="Average knowledge of JS (ES5, ES6)" appTippy [tippyOptions]="tippyOptions">
-    <img class="skills__img" src="/assets/blocks/skills/js.svg" alt="js">
-  </div>
-</div>
-
-<div class="skill__card" style="margin-left: 60px">
-  <h2 class="skills__heading">CSS</h2>
-  <div class="skills__item skills__item--marginless" title="Good knowledge of HTML5" appTippy [tippyOptions]="tippyOptions">
-    <img class="skills__img" src="/assets/blocks/skills/sass.svg" alt="html5">
-  </div>
-
-  <div class="skills__item" title="Good knowledge of CSS3" appTippy [tippyOptions]="tippyOptions">
-    <img class="skills__img" src="/assets/blocks/skills/stylus.svg" alt="css3">
-  </div>
-
-  <div class="skills__item" title="Average knowledge of JS (ES5, ES6)" appTippy [tippyOptions]="tippyOptions">
-    <img class="skills__img" src="/assets/blocks/skills/bootstrap.svg" alt="js">
-  </div>
-</div>
-
-<div class="skill__card" style="margin-left: 60px">
-  <h2 class="skills__heading">HTML</h2>
-  <div class="skills__item skills__item--marginless" title="Good knowledge of HTML5" appTippy [tippyOptions]="tippyOptions">
-    <img class="skills__img" src="/assets/blocks/skills/pug.svg" alt="html5">
-  </div>
-
-</div> -->

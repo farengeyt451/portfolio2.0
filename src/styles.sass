@@ -1,7 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
-// Swiper styles in /app/components/portfolio
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css'
 @import '~src/common/index'
 
+// Swiper styles in /app/components/portfolio
 .portfolio
   .swiper
     overflow: hidden
@@ -42,6 +43,22 @@
 
 // Tippy styles in /app/components/skills
 .skill-theme
+  color: darken($text-main, 10%)
   font:
     family: $font-second
-    size: 18px
+    size: 14px
+    weight: $font-semi-bold
+  padding: 10px 15px
+
+  .tippy-backdrop
+    background-color: $third
+
+// Mat-tab styles in /app/components/skills
+.skills
+  .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar
+    background: $third
+    height: 2px
+
+  .mat-ripple
+    border-radius: 5px
+

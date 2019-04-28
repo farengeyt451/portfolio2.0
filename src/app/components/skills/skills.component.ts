@@ -11,10 +11,12 @@ export class SkillsComponent implements OnInit {
 
   tippyOptions = {
     placement: 'top',
-    arrow: true,
+    arrow: false,
     animation: 'shift-toward',
-    theme: 'skill'
+    theme: 'skill',
+    trigger: 'mouseenter'
   };
+
   constructor() {}
 
   ngOnInit() {

@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ParticlesModule } from 'angular-particle';
 import { SwiperModule } from 'ngx-swiper-wrapper';
 import { TippyModule } from 'ng-tippy';
-
+import { MatTabsModule } from '@angular/material';
 import { AppComponent } from './app.component';
 import { IndexPageComponent } from './components/index-page';
 import { HomeComponent } from './components/home';
@@ -28,7 +28,8 @@ import { SkillsComponent } from './components/skills';
     ParticlesModule,
     BrowserAnimationsModule,
     SwiperModule,
-    TippyModule
+    TippyModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
