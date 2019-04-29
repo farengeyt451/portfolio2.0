@@ -25,7 +25,7 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
     console.log(this.portfolio);
     setTimeout(() => {
       this.portfolio.nativeElement.style.opacity = 1;
-    }, 1200);
+    }, 1000);
     // const swiper = document.querySelector('.swiper-container');
     // swiper['swiper'].loopCreate();
   }

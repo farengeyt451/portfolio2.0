@@ -14,6 +14,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     setTimeout(() => {
       this.home.nativeElement.style.opacity = 1;
-    }, 1400);
+    }, 1100);
   }
 }

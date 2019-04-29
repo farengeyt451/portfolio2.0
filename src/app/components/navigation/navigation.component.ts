@@ -19,7 +19,7 @@ export class NavigationComponent implements OnInit {
       // the layers are the elements that move from the sides
       nmbLayers: 2,
       // bg color of each layer
-      bgcolor: ['#37a7ff', '#7447ae', '#feb144'],
+      bgcolor: ['#37a7ff', '#7447ae'],
       // effect classname
       effect: 'anim--effect-2'
     };
@@ -49,6 +49,6 @@ export class NavigationComponent implements OnInit {
     }
     setTimeout(() => {
       this.router.navigate([`${path}`]);
-    }, 150);
+    }, 250);
   }
 }
