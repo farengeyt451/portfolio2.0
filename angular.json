@@ -23,8 +23,16 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["node_modules/normalize.css/normalize.css", "src/styles.sass"],
-            "scripts": [],
+            "styles": [
+              "node_modules/normalize.css/normalize.css",
+              "src/styles.sass",
+              "./src/app/components/page-reveal-effect/css/component.css"
+            ],
+            "scripts": [
+              "./src/app/components/page-reveal-effect/js/modernizr-custom.js",
+              "./src/app/components/page-reveal-effect/js/classie.js",
+              "./src/app/components/page-reveal-effect/js/main.js"
+            ],
             "es5BrowserSupport": true
           },
           "configurations": {
