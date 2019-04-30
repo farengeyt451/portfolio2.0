@@ -4,8 +4,6 @@
   position: relative
   color: $light
   font-family: $font-main
-  opacity: 0
-  transition: opacity 0.3s cubic-bezier(0.7, 0, 0.3, 1)
 
 .home__hero
   position: absolute
@@ -19,6 +17,10 @@
     weight: $font-light
   line-height: 1.4
   cursor: default
+  opacity: 0
+  transform: translateX(-100px)
+  transition: transform 0.8s cubic-bezier(0.7, 0, 0.3, 1), opacity 1s
+  transition-delay: 0s, 0.2s
 
 .home__name
   display: block
@@ -31,6 +33,10 @@
     weight: $font-light
   margin: 25px 0 0 0
   cursor: default
+  opacity: 0
+  transform: translateX(-100px)
+  transition: 0.8s cubic-bezier(0.7, 0, 0.3, 1)
+  transition-delay: 0.2s
 
 .home__more
   display: inline-block
@@ -47,11 +53,15 @@
   letter-spacing: 1px
   cursor: pointer
   text-decoration: none
-  transition: box-shadow 0.2s, transform 0.15s, background-color 0.2s
+  opacity: 0
+  transition: box-shadow 0.2s, transform 0.15s, background-color 0.2s, opacity 0.8s cubic-bezier(0.7, 0, 0.3, 1)
+  transform: translateY(0)
+  transform: translateX(-100px)
+  transition-delay: 0s, 0s, 0s, 0.6s
 
   &:hover
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1)
-    transform: translateY(-2px)
+    transform: translateY(-2px) !important
 
   &:active
     background-color: darken($primary, 5%)

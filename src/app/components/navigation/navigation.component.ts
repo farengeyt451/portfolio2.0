@@ -1,5 +1,5 @@
-import { Component, OnInit, Renderer2, ViewChild, ElementRef } from '@angular/core';
-import { toggleMenu } from './menu.animation';
+import { Component, OnInit, Renderer2, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { toggleMenu } from './navigation.animation';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,16 +8,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./navigation.component.sass'],
   animations: [toggleMenu]
 })
-export class NavigationComponent implements OnInit {
+export class NavigationComponent implements OnInit, AfterViewInit {
   menuState: string = 'opened';
   @ViewChild('navMenu') navMenu: ElementRef;
 
   constructor(private renderer: Renderer2, private router: Router) {}
 
-  ngOnInit() {
-    setTimeout(() => {
-      this.renderer.setStyle(this.navMenu.nativeElement, 'opacity', '1');
-    }, 100);
+  ngOnInit() {}
+
+  ngAfterViewInit() {
+    this.renderer.setStyle(this.navMenu.nativeElement, 'opacity', '1');
   }
 
   onMenuClick(el: HTMLElement) {
@@ -25,9 +25,5 @@ export class NavigationComponent implements OnInit {
       ? this.renderer.removeClass(el, 'hamburger--active')
       : this.renderer.addClass(el, 'hamburger--active');
     this.menuState = this.menuState === 'opened' ? 'closed' : 'opened';
-  }
-
-  navigate(path: string) {
-    this.router.navigate([`${path}`]);
   }
 }
