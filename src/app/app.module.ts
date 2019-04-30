@@ -12,7 +12,6 @@ import { HomeComponent } from './components/home';
 import { NavigationComponent } from './components/navigation';
 import { PortfolioComponent } from './components/portfolio';
 import { SkillsComponent } from './components/skills';
-import { PageLoaderComponent } from './components/page-loader/page-loader.component';
 
 @NgModule({
   declarations: [
@@ -21,8 +20,7 @@ import { PageLoaderComponent } from './components/page-loader/page-loader.compon
     HomeComponent,
     NavigationComponent,
     PortfolioComponent,
-    SkillsComponent,
-    PageLoaderComponent
+    SkillsComponent
   ],
   imports: [
     BrowserModule,

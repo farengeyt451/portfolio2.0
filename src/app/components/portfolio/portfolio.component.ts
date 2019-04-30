@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 import { swiperConfig } from './swiper.config';
 import { projects } from './projects';
 import { Project } from '../../interfaces/portfolio.interface';
@@ -15,18 +15,15 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
   @ViewChild(SwiperComponent) componentRef?: SwiperComponent;
   @ViewChild('portfolio') portfolio: ElementRef;
 
-  constructor() {}
+  constructor(private renderer: Renderer2) {}
 
   ngOnInit() {
     this.projects = projects;
   }
 
   ngAfterViewInit() {
-    console.log(this.portfolio);
     setTimeout(() => {
-      this.portfolio.nativeElement.style.opacity = 1;
-    }, 1000);
-    // const swiper = document.querySelector('.swiper-container');
-    // swiper['swiper'].loopCreate();
+      this.renderer.setStyle(this.portfolio.nativeElement, 'opacity', '1');
+    }, 100);
   }
 }
