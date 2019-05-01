@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { gradient } from 'src/assets/js/gradient.js';
 import { particleParams, particleStyles } from './particle.config';
 
@@ -7,13 +7,15 @@ import { particleParams, particleStyles } from './particle.config';
   templateUrl: './index-page.component.html',
   styleUrls: ['./index-page.component.sass']
 })
-export class IndexPageComponent implements OnInit {
+export class IndexPageComponent implements OnInit, AfterViewInit {
   particleStyles: object = particleStyles;
   particleParams: object = particleParams;
 
   constructor() {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  ngAfterViewInit() {
     gradient();
   }
 }
