@@ -27,6 +27,7 @@
   .swiper-button-next
     width: 80px
     height: 80px
+    margin-top: -40px
     background-image: url('/assets/blocks/slider/arrow.png')
     background-size: 80px 80px
     box-shadow: 0 0 40px rgba($dark, 0.05)
@@ -38,11 +39,10 @@
       box-shadow: 0 0 40px rgba($dark, 0.15)
 
   .swiper-button-prev
-    transform: translateY(-25%)
     left: 0
 
   .swiper-button-next
-    transform: translateY(-25%) rotate(180deg)
+    transform: rotate(180deg)
     right: 0
 
 // Tippy styles in /app/components/skills
@@ -71,3 +71,6 @@
 
     &:hover
       opacity: 1
+
+  .mat-tab-label-active
+    opacity: 1

@@ -1,6 +1,6 @@
 <div class="portfolio" *ngIf="projects" #portfolio>
 
-  <swiper [config]="swiperConfig" useSwiperClass="swiper">
+  <swiper [config]="swiperConfig" >
 
     <div class="slide" *ngFor="let project of projects">
       <img class="slide__logo" [src]="project.logo" alt="project.name">

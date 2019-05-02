@@ -7,19 +7,18 @@ import { skills } from './skills';
   styleUrls: ['./skills.component.sass']
 })
 export class SkillsComponent implements OnInit {
-  skills;
-
   tippyOptions = {
     placement: 'top',
     arrow: false,
     animation: 'shift-toward',
     theme: 'skill',
-    trigger: 'mouseenter'
+    trigger: 'mouseenter',
+    delay: [100, 100],
+    flipOnUpdate: true,
+    sticky: true
   };
 
   constructor() {}
 
-  ngOnInit() {
-    this.skills = skills;
-  }
+  ngOnInit() {}
 }
