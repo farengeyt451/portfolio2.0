@@ -1,12 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { skills } from './skills';
+import { Component, OnInit, ViewChild, ElementRef, Renderer2, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.sass']
 })
-export class SkillsComponent implements OnInit {
+export class SkillsComponent implements OnInit, AfterViewInit {
+  @ViewChild('skills') skills: ElementRef;
+
   tippyOptions = {
     placement: 'top',
     arrow: false,
@@ -18,7 +19,13 @@ export class SkillsComponent implements OnInit {
     sticky: true
   };
 
-  constructor() {}
+  constructor(private renderer: Renderer2) {}
 
   ngOnInit() {}
+
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.renderer.setStyle(this.skills.nativeElement, 'opacity', '1');
+    }, 100);
+  }
 }

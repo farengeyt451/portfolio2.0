@@ -1,4 +1,4 @@
-<div class="skills">
+<div class="skills" #skills>
 
   <mat-tab-group mat-align-tabs="center" disableRipple animationDuration="700">
 
@@ -99,7 +99,7 @@
 
     <mat-tab>
       <ng-template mat-tab-label>
-          <span class="skill__tab">VSC and Hubs</span>
+          <span class="skill__tab">VSC & Hubs</span>
       </ng-template>
       <ng-template matTabContent>
         <div class="skill__content">
@@ -118,10 +118,13 @@
 
     <mat-tab>
       <ng-template mat-tab-label>
-          <span class="skill__tab">Apps</span>
+          <span class="skill__tab">OS & Apps</span>
       </ng-template>
       <ng-template matTabContent>
         <div class="skill__content">
+          <div class="skills__item" title="Linux" appTippy [tippyOptions]="tippyOptions">
+            <img class="skills__img" src="/assets/blocks/skills/linux.svg" alt="linux">
+          </div>
           <div class="skills__item" title="Visual Studio Code" appTippy [tippyOptions]="tippyOptions">
             <img class="skills__img" src="/assets/blocks/skills/vsc.svg" alt="vsc">
           </div>
@@ -133,6 +136,9 @@
           </div>
           <div class="skills__item" title="Avocode" appTippy [tippyOptions]="tippyOptions">
             <img class="skills__img" src="/assets/blocks/skills/avocode.svg" alt="avocode">
+          </div>
+          <div class="skills__item" title="Zeplin" appTippy [tippyOptions]="tippyOptions">
+            <img class="skills__img" src="/assets/blocks/skills/zeplin.svg" alt="zeplin">
           </div>
         </div>
       </ng-template>
