@@ -1,0 +1,99 @@
+@import '~src/common/index'
+
+.contacts
+  position: relative
+  margin-left: auto
+  margin-top: 10vh
+  z-index: 1
+
+.contacts__item
+  display: flex
+  align-items: center
+  justify-content: space-between
+  margin-bottom: 50px
+  color: $light
+  font:
+    family: $font-second
+    weight: $font-medium
+    size: 18px
+
+.contacts__caption
+  flex-basis: 60%
+  opacity: 0
+  animation: fade-in-right ease 0.4s forwards
+
+.contacts__devider
+  position: relative
+  flex-basis: 33%
+  transform: scaleX(0)
+  transform-origin: left
+  animation: grow-left cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards
+  animation-delay: 0.4s
+  margin-bottom: 25px
+
+.contacts__devider--bottom
+  animation-delay: 0.6s
+  margin-bottom: 0
+  margin-top: 25px
+
+.contacts__line
+  width: 55%
+  background-color: rgba($light, 0.7)
+  height: 2px
+  transition: background-color 0.2s, height 0.35s, width 0.2s ease
+
+  .contacts__devider--bottom &
+    margin-left: auto
+
+.contacts__source
+  flex-basis: 30%
+  text-align: left
+  opacity: 0
+  animation: fade-in-right ease 0.4s forwards
+  animation-delay: 0.8s
+
+.contacts__action
+  display: inline-block
+  border-radius: 100px
+  padding: 15px 80px
+  border-color: transparent
+  background-color: $primary
+  color: $light
+  font:
+    size: 16px
+    family: $font-main
+    weight: $font-light
+  letter-spacing: 1px
+  cursor: pointer
+  opacity: 0
+  text-decoration: none
+  animation: show cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s 1.1s forwards
+
+  &:hover
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1)
+
+  &:active
+    background-color: darken($primary, 5%)
+
+@keyframes fade-in-right
+  from
+    opacity: 0
+    transform: translateX(-15px)
+
+  to
+    opacity: 1
+    transform: translateX(0)
+
+@keyframes grow-left
+  from
+    transform: scaleX(0)
+
+  to
+    transform: scaleX(1)
+
+@keyframes show
+  from
+    opacity: 0
+
+  to
+    opacity: 1
