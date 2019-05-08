@@ -1,4 +1,5 @@
 @import '~src/common/index'
+@import '~src/common/animations'
 
 .nav
   display: flex
@@ -6,9 +7,6 @@
   align-items: center
   margin: 10vh 0 0 auto
   max-width: 500px
-  opacity: 0
-  transition: opacity 0.6s cubic-bezier(0.7, 0, 0.3, 1)
-  transition-delay: 1s
 
 .nav__menu
   display: flex
@@ -17,7 +15,7 @@
   flex-grow: 1
   list-style: none
 
-.nav__iem
+.nav__item
   opacity: 0
   transition: opacity 0.2s, transform 0.2s
 
@@ -49,22 +47,29 @@
   margin-left: 40px
 
 .hamburger__line
+  position: relative
   display: block
   width: 40px
   height: 4px
   margin: 0 0 0.45em auto
   background-color: $light
   transition: 0.25s ease-in-out
+  opacity: 0
+  animation: fade-in-right-pos 0.45s ease, show 0.4s ease 0.25s
+  animation-fill-mode: forwards
 
   &:nth-child(1)
     width: 30px
+    animation-delay: 0.25s
     transition-delay: 0.25s
 
   &:nth-child(2)
+    animation-delay: 0.325s
     transition-delay: 0.325s
 
   &:nth-child(3)
     width: 20px
+    animation-delay: 0.475s
     transition-delay: 0.475s
 
   .hamburger__opened &

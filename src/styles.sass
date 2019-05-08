@@ -64,12 +64,20 @@
     height: 1px
 
   .mat-tab-label
+    color: $light
     justify-content: flex-start
     padding-right: 50px
-    transition: opacity 0.15s cubic-bezier(0.7, 0, 0.3, 1)
+    transition: opacity 0.15s cubic-bezier(0.7, 0, 0.3, 1), color 0.25s
+    margin-bottom: 15px
+
+    &:last-child
+      margin-bottom: 0
 
     &:hover
+      color: $third
       opacity: 1
 
+
   .mat-tab-label-active
+    color: $third
     opacity: 1

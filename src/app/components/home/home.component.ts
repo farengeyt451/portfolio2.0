@@ -1,24 +1,12 @@
-import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, Renderer2 } from '@angular/core';
-import { showHero } from './home.animation';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.sass'],
-  animations: [showHero]
+  styleUrls: ['./home.component.sass']
 })
-export class HomeComponent implements OnInit, AfterViewInit {
-  @ViewChild('home') home: ElementRef;
-  heroState: string = 'hidden';
-
-  constructor(private renderer: Renderer2) {}
+export class HomeComponent implements OnInit {
+  constructor() {}
 
   ngOnInit() {}
-
-  ngAfterViewInit() {
-    setTimeout(() => {
-      // this.renderer.setStyle(this.home.nativeElement, 'opacity', '1');
-      this.heroState = this.heroState === 'hidden' ? 'showen' : 'hidden';
-    }, 200);
-  }
 }

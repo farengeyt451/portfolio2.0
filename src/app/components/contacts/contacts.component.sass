@@ -1,4 +1,5 @@
 @import '~src/common/index'
+@import '~src/common/animations'
 
 .contacts
   position: relative
@@ -18,9 +19,28 @@
     size: 18px
 
 .contacts__caption
-  flex-basis: 60%
+  flex-basis: 20%
   opacity: 0
-  animation: fade-in-right ease 0.4s forwards
+  animation: fade-in-right ease 0.4s, show 0.4s ease 0.25s
+  animation-fill-mode: forwards
+
+.contacts__inner
+  background-color: rgba(#0F75BC, 1)
+  padding: 10px 60px
+  border-radius: 5px
+
+  &:before
+    content: ''
+    display: inline-block
+    height: 20px
+    width: 20px
+    vertical-align: top
+    line-height: 1
+    margin-right: 10px
+    background-image: url('/assets/blocks/contacts/mail.svg')
+    background-position: center
+    background-size: contain
+    background-repeat: no-repeat
 
 .contacts__devider
   position: relative
@@ -29,12 +49,6 @@
   transform-origin: left
   animation: grow-left cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards
   animation-delay: 0.4s
-  margin-bottom: 25px
-
-.contacts__devider--bottom
-  animation-delay: 0.6s
-  margin-bottom: 0
-  margin-top: 25px
 
 .contacts__line
   width: 55%
@@ -49,13 +63,14 @@
   flex-basis: 30%
   text-align: left
   opacity: 0
-  animation: fade-in-right ease 0.4s forwards
+  animation: fade-in-right ease 0.4s, show 0.4s ease 0.25s
   animation-delay: 0.8s
+  animation-fill-mode: forwards
 
 .contacts__action
   display: inline-block
   border-radius: 100px
-  padding: 15px 80px
+  padding: 10px 50px
   border-color: transparent
   background-color: $primary
   color: $light
@@ -75,25 +90,3 @@
   &:active
     background-color: darken($primary, 5%)
 
-@keyframes fade-in-right
-  from
-    opacity: 0
-    transform: translateX(-15px)
-
-  to
-    opacity: 1
-    transform: translateX(0)
-
-@keyframes grow-left
-  from
-    transform: scaleX(0)
-
-  to
-    transform: scaleX(1)
-
-@keyframes show
-  from
-    opacity: 0
-
-  to
-    opacity: 1

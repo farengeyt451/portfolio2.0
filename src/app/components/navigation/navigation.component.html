@@ -1,21 +1,21 @@
 <div class="nav" #navMenu>
 
   <ul class="nav__menu">
-    <li class="nav__iem" [@toggleMenu]=menuState>
+    <li class="nav__item" [@toggleMenu]=menuState>
       <a class="nav__link" routerLink="/home" routerLinkActive="nav__link--active">Home</a>
     </li>
-    <li class="nav__iem" [@toggleMenu]=menuState>
+    <li class="nav__item" [@toggleMenu]=menuState>
       <a class="nav__link" routerLink="/portfolio" routerLinkActive="nav__link--active">Portfolio</a>
     </li>
-    <li class="nav__iem" [@toggleMenu]=menuState>
+    <li class="nav__item" [@toggleMenu]=menuState>
       <a class="nav__link" routerLink="/skills" routerLinkActive="nav__link--active">Skills</a>
     </li>
-    <li class="nav__iem" [@toggleMenu]=menuState>
+    <li class="nav__item" [@toggleMenu]=menuState>
       <a class="nav__link" routerLink="/contacts" routerLinkActive="nav__link--active">Contacts</a>
     </li>
   </ul>
 
-  <div class="nav__toggle hamburger" (click)="onMenuClick(hamburger)" #hamburger>
+  <div class="hamburger nav__toggle" (click)="onMenuClick(hamburger)" #hamburger>
 
     <div class="hamburger__default">
       <span class="hamburger__line"></span>

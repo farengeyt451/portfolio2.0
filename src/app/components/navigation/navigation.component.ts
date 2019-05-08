@@ -1,6 +1,5 @@
-import { Component, OnInit, Renderer2, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, OnInit, Renderer2, ViewChild, ElementRef } from '@angular/core';
 import { toggleMenu } from './navigation.animation';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navigation',
@@ -8,17 +7,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./navigation.component.sass'],
   animations: [toggleMenu]
 })
-export class NavigationComponent implements OnInit, AfterViewInit {
+export class NavigationComponent implements OnInit {
   menuState: string = 'opened';
   @ViewChild('navMenu') navMenu: ElementRef;
 
-  constructor(private renderer: Renderer2, private router: Router) {}
+  constructor(private renderer: Renderer2) {}
 
   ngOnInit() {}
-
-  ngAfterViewInit() {
-    this.renderer.setStyle(this.navMenu.nativeElement, 'opacity', '1');
-  }
 
   onMenuClick(el: HTMLElement) {
     el.classList.contains('hamburger--active')

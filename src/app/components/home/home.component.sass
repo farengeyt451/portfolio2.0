@@ -1,4 +1,5 @@
 @import '~src/common/index'
+@import '~src/common/animations'
 
 .home
   position: relative
@@ -18,9 +19,8 @@
   line-height: 1.4
   cursor: default
   opacity: 0
-  transform: translateX(-100px)
-  transition: transform 0.8s cubic-bezier(0.7, 0, 0.3, 1), opacity 1s
-  transition-delay: 0s, 0.2s
+  animation: fade-in-right 0.75s ease, show 0.4s ease 0.25s
+  animation-fill-mode: forwards
 
 .home__name
   display: block
@@ -34,9 +34,9 @@
   margin: 25px 0 0 0
   cursor: default
   opacity: 0
-  transform: translateX(-100px)
-  transition: 0.8s cubic-bezier(0.7, 0, 0.3, 1)
-  transition-delay: 0.2s
+  animation: fade-in-right 0.75s ease, show 0.4s ease 0.25s
+  animation-delay: 0.2s
+  animation-fill-mode: forwards
 
 .home__more
   display: inline-block
@@ -54,14 +54,14 @@
   cursor: pointer
   text-decoration: none
   opacity: 0
-  transition: box-shadow 0.2s, transform 0.15s, background-color 0.2s, opacity 0.8s cubic-bezier(0.7, 0, 0.3, 1)
+  transition: box-shadow 0.2s, transform 0.15s, background-color 0.2s
   transform: translateY(0)
-  transform: translateX(-100px)
-  transition-delay: 0s, 0s, 0s, 0.6s
+  animation: show cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s forwards
+  animation-delay: 0.75s
 
   &:hover
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1)
-    transform: translateY(-2px) !important
+    transform: translateY(-2px)
 
   &:active
     background-color: darken($primary, 5%)
