@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { InlineSVGModule } from 'ng-inline-svg';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { ParticlesModule } from 'angular-particle';
@@ -26,7 +28,9 @@ import { ContactsComponent } from './components/contacts';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
+    InlineSVGModule.forRoot(),
     ParticlesModule,
     BrowserAnimationsModule,
     SwiperModule,
