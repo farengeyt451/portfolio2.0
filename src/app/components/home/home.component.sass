@@ -11,6 +11,12 @@
   margin-top: 10vh
   right: 0
 
+  +media($mobile-lg)
+    display: inline-block
+    position: relative
+    left: 50%
+    transform: translateX(-50%)
+
 .home__caption
   margin: 0
   font:
@@ -21,6 +27,15 @@
   opacity: 0
   animation: fade-in-right 0.75s ease, show 0.4s ease 0.25s
   animation-fill-mode: forwards
+
+  +media($laptop-lg)
+    font-size: 60px
+
+  +media($tablet)
+    font-size: 48px
+
+  +media($mobile-sm)
+    font-size: 38px
 
 .home__name
   display: block
@@ -37,6 +52,15 @@
   animation: fade-in-right 0.75s ease, show 0.4s ease 0.25s
   animation-delay: 0.2s
   animation-fill-mode: forwards
+
+  +media($laptop-lg)
+    font-size: 28px
+
+  +media($tablet)
+    font-size: 20px
+
+  +media($mobile-sm)
+    font-size: 14px
 
 .home__more
   display: inline-block
@@ -65,3 +89,11 @@
 
   &:active
     background-color: darken($primary, 5%)
+
+  +media($tablet)
+    padding: 15px 70px
+    font-size: 16px
+
+  +media($mobile-sm)
+    padding: 10px 50px
+    font-size: 14px

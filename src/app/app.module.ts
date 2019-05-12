@@ -8,6 +8,7 @@ import { ParticlesModule } from 'angular-particle';
 import { SwiperModule } from 'ngx-swiper-wrapper';
 import { TippyModule } from 'ng-tippy';
 import { MatTabsModule } from '@angular/material';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { AppComponent } from './app.component';
 import { IndexPageComponent } from './components/index-page';
 import { HomeComponent } from './components/home';
@@ -35,7 +36,8 @@ import { ContactsComponent } from './components/contacts';
     BrowserAnimationsModule,
     SwiperModule,
     TippyModule,
-    MatTabsModule
+    MatTabsModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
