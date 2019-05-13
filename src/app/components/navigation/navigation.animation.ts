@@ -5,14 +5,16 @@ export const toggleMenu = trigger('toggleMenu', [
     'opened',
     style({
       opacity: 0,
-      transform: 'translateX(-25px)'
+      transform: 'translateX(-25px)',
+      pointerEvents: 'none'
     })
   ),
   state(
     'closed',
     style({
       opacity: 1,
-      transform: 'translateX(0)'
+      transform: 'translateX(0)',
+      pointerEvents: 'all'
     })
   )
 ]);
