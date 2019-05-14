@@ -2,6 +2,28 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css'
 @import '~src/common/index'
 
+// Styles for ngx smart modal
+$color-overlay: #fff
+@import '~ngx-smart-modal/ngx-smart-modal'
+.nsm-dialog
+  height: 100%
+  overflow: hidden
+  max-width: none
+  margin: 0
+.nsm-content
+  height: 100%
+  width: 100%
+  position: static
+  display: block
+  padding: 0
+  margin: 0
+  box-shadow: none
+.nsm-body
+  display: flex
+  align-items: center
+  width: 100%
+  height: 100%
+
 // Swiper styles in /app/components/portfolio
 .portfolio
   .swiper

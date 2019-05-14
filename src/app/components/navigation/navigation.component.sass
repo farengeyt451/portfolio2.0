@@ -8,12 +8,32 @@
   margin: 10vh 0 0 auto
   max-width: 500px
 
+  +media($tablet)
+    margin-top: 5vh
+
+  +media($mobile-md)
+    justify-content: flex-end
+
 .nav__menu
   display: flex
   justify-content: space-between
   align-items: center
   flex-grow: 1
   list-style: none
+  padding: 0
+
+  +media($mobile-md)
+    display: none
+
+.nav__toggle
+  +media($mobile-md)
+    display: none
+
+.nav__toggle--mobile
+  display: none
+
+  +media($mobile-md)
+    display: block
 
 .nav__item
   opacity: 0
@@ -42,9 +62,9 @@
 
 .hamburger
   position: relative
+  flex-basis: 15%
   width: 40px
   cursor: pointer
-  margin-left: 40px
 
   +media($mobile-md)
     margin-left: 0
@@ -101,3 +121,6 @@
 
   .hamburger--active &
     width: 0
+
+  +media($tablet)
+    height: 3px
