@@ -2,16 +2,16 @@
   <div class="mob">
     <ul class="mob__menu">
       <li class="mob__item">
-        <a class="mob__link" routerLink="/home" routerLinkActive="mob__link--active">Home</a>
+        <a class="mob__link" routerLink="/home" (click)="mobNav.close()">Home</a>
       </li>
       <li class="mob__item">
-        <a class="mob__link" routerLink="/portfolio" routerLinkActive="mob__link--active">Portfolio</a>
+        <a class="mob__link" routerLink="/portfolio" (click)="mobNav.close()">Portfolio</a>
       </li>
       <li class="mob__item">
-        <a class="mob__link" routerLink="/skills" routerLinkActive="mob__link--active">Skills</a>
+        <a class="mob__link" routerLink="/skills" (click)="mobNav.close()">Skills</a>
       </li>
       <li class="mob__item">
-        <a class="mob__link" routerLink="/contacts" routerLinkActive="mob__link--active">Contacts</a>
+        <a class="mob__link" routerLink="/contacts" (click)="mobNav.close()">Contacts</a>
       </li>
     </ul>
   </div>
