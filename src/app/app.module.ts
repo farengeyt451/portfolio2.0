@@ -9,6 +9,7 @@ import { TippyModule } from 'ng-tippy';
 import { MatTabsModule } from '@angular/material';
 import { NgxSmartModalModule } from 'ngx-smart-modal';
 import { AppRoutingModule } from './app-routing.module';
+import { NavigationService } from './services/navigation.service';
 import { AppComponent } from './app.component';
 import { IndexPageComponent } from './components/index-page';
 import { HomeComponent } from './components/home';
@@ -41,7 +42,7 @@ import { MobileNavigationComponent } from './components/mobile-navigation';
     MatTabsModule,
     NgxSmartModalModule.forRoot()
   ],
-  providers: [],
+  providers: [NavigationService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

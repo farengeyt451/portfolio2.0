@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationService } from 'src/app/services/navigation.service';
 
 @Component({
   selector: 'app-mobile-navigation',
@@ -6,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mobile-navigation.component.sass']
 })
 export class MobileNavigationComponent implements OnInit {
-  constructor() {}
-
+  constructor(private navService: NavigationService) {}
   ngOnInit() {}
+  onMenuItemClick($event: MouseEvent) {
+    this.navService.changeMenuState('opened');
+  }
 }

@@ -1,18 +1,16 @@
-<ngx-smart-modal #mobNav [identifier]="'mobNav'" customClass="nsm-centered">
-  <div class="mob">
-    <ul class="mob__menu">
-      <li class="mob__item">
-        <a class="mob__link" routerLink="/home" (click)="mobNav.close()">Home</a>
-      </li>
-      <li class="mob__item">
-        <a class="mob__link" routerLink="/portfolio" (click)="mobNav.close()">Portfolio</a>
-      </li>
-      <li class="mob__item">
-        <a class="mob__link" routerLink="/skills" (click)="mobNav.close()">Skills</a>
-      </li>
-      <li class="mob__item">
-        <a class="mob__link" routerLink="/contacts" (click)="mobNav.close()">Contacts</a>
-      </li>
-    </ul>
-  </div>
-</ngx-smart-modal>
+<div class="mob">
+  <ul class="mob__menu">
+    <li class="mob__item">
+      <a class="mob__link" routerLink="/home" (click)="onMenuItemClick($event)">Home</a>
+    </li>
+    <li class="mob__item">
+      <a class="mob__link" routerLink="/portfolio" (click)="onMenuItemClick($event)">Portfolio</a>
+    </li>
+    <li class="mob__item">
+      <a class="mob__link" routerLink="/skills" (click)="onMenuItemClick($event)">Skills</a>
+    </li>
+    <li class="mob__item">
+      <a class="mob__link" routerLink="/contacts" (click)="onMenuItemClick($event)">Contacts</a>
+    </li>
+  </ul>
+</div>
