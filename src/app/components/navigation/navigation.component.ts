@@ -2,6 +2,7 @@ import { Component, OnInit, Renderer2, ViewChild, ElementRef } from '@angular/co
 import { toggleMenu } from './navigation.animation';
 import { NgxSmartModalService } from 'ngx-smart-modal';
 import { NavigationService } from 'src/app/services/navigation.service';
+import { WindowDimensionsService } from 'src/app/services/window-dimensions.service';
 
 @Component({
   selector: 'app-navigation',
@@ -11,7 +12,12 @@ import { NavigationService } from 'src/app/services/navigation.service';
 })
 export class NavigationComponent implements OnInit {
   @ViewChild('navMenu') navMenu: ElementRef;
+  @ViewChild('hamburger') hamburger: ElementRef;
   @ViewChild('mobileHamburger') mobileHamburger: ElementRef;
+
+  hamburgerNativeEl: HTMLElement;
+  mobileHamburgerNativeEl: HTMLElement;
+
   menuState: string = 'opened';
   windowWidth: number;
 
@@ -22,23 +28,25 @@ export class NavigationComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.navService.currentMenuState.subscribe((menuState: string) => {
-      this.menuState = menuState;
-      this.menuState === 'opened'
-        ? this.renderer.removeClass(this.mobileHamburger.nativeElement, 'hamburger--active')
-        : this.renderer.addClass(this.mobileHamburger.nativeElement, 'hamburger--active');
-    });
+    this.hamburgerNativeEl = this.hamburger.nativeElement;
+    this.mobileHamburgerNativeEl = this.mobileHamburger.nativeElement;
+    // this.navService.currentMenuState.subscribe((menuState: string) => {
+    // this.menuState = menuState;
+    // this.menuState === 'opened'
+    // ? this.renderer.removeClass(this.mobileHamburger.nativeElement, 'hamburger--active')
+    // : this.renderer.addClass(this.mobileHamburger.nativeElement, 'hamburger--active');
+    // });
   }
 
-  onMenuClick(el: HTMLElement) {
-    el.classList.contains('hamburger--active')
-      ? this.renderer.removeClass(el, 'hamburger--active')
-      : this.renderer.addClass(el, 'hamburger--active');
+  onMenuClick() {
+    this.hamburgerNativeEl.classList.contains('hamburger--active')
+      ? this.renderer.removeClass(this.hamburgerNativeEl, 'hamburger--active')
+      : this.renderer.addClass(this.hamburgerNativeEl, 'hamburger--active');
     this.menuState = this.menuState === 'opened' ? 'closed' : 'opened';
   }
 
-  onModalOpen(el: HTMLElement) {
-    this.menuState = this.menuState === 'opened' ? 'closed' : 'opened';
-    this.navService.changeMenuState(this.menuState);
+  onMobileNavOpen(el: HTMLElement) {
+    // this.menuState = this.menuState === 'opened' ? 'closed' : 'opened';
+    // this.navService.changeMenuState(this.menuState);
   }
 }

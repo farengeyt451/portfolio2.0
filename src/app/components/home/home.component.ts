@@ -8,18 +8,18 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./home.component.sass']
 })
 export class HomeComponent implements OnInit, OnDestroy {
-  navSubscription: Subscription;
+  navSubscription$: Subscription;
   menuState: string;
 
   constructor(private navService: NavigationService) {}
 
   ngOnInit() {
-    this.navSubscription = this.navService.currentMenuState.subscribe(
+    this.navSubscription$ = this.navService.currentMenuState.subscribe(
       menuState => (this.menuState = menuState)
     );
   }
 
   ngOnDestroy() {
-    this.navSubscription.unsubscribe();
+    this.navSubscription$.unsubscribe();
   }
 }

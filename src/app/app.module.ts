@@ -18,6 +18,7 @@ import { PortfolioComponent } from './components/portfolio';
 import { SkillsComponent } from './components/skills';
 import { ContactsComponent } from './components/contacts';
 import { MobileNavigationComponent } from './components/mobile-navigation';
+import { WindowDimensionsService } from './services/window-dimensions.service';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,11 @@ import { MobileNavigationComponent } from './components/mobile-navigation';
     MatTabsModule,
     NgxSmartModalModule.forRoot()
   ],
-  providers: [NavigationService],
+  providers: [
+    NavigationService,
+    { provide: 'windowObject', useValue: window },
+    WindowDimensionsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

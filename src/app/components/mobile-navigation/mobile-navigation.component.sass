@@ -1,9 +1,17 @@
-@import '~src/common/index'
-@import '~src/common/animations'
+@import '~src/styles/common/index'
+@import '~src/styles/common/animations'
 
 .mob
-  position: relative
-  z-index: 1
+  display: none
+  align-items: center
+  justify-content: center
+  position: fixed
+  height: 100%
+  left: 0
+  right: 0
+
+  +media($mobile-md)
+    display: flex
 
 .mob-nav
   position: relative
@@ -13,9 +21,17 @@
   padding: 0
   list-style-type: none
   text-align: center
+  margin-top: -100px
 
 .mob__item
-  padding: 20px 0
+  padding: 45px 0
+  opacity: 0
+  animation: fade-in-top 0.5s ease, show 0.25s ease 0.25s
+  animation-fill-mode: forwards
+
+  @for $i from 1 through 4
+    &:nth-child(#{$i})
+      animation-delay: #{$i * 0.1}s
 
 .mob__link
   font-family: $font-main

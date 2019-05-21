@@ -3,6 +3,8 @@ import { swiperConfig } from './swiper.config';
 import { projects } from './projects';
 import { Project } from '../../interfaces/portfolio.interface';
 import { SwiperComponent } from 'ngx-swiper-wrapper';
+import { Subscription } from 'rxjs';
+import { NavigationService } from 'src/app/services/navigation.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -14,9 +16,19 @@ export class PortfolioComponent implements OnInit {
   projects: Array<Project>;
   @ViewChild(SwiperComponent) componentRef?: SwiperComponent;
 
-  constructor() {}
+  navSubscription$: Subscription;
+  menuState: string;
+
+  constructor(private navService: NavigationService) {}
 
   ngOnInit() {
     this.projects = projects;
+    // this.navSubscription$ = this.navService.currentMenuState.subscribe(
+    // menuState => (this.menuState = menuState)
+    // );
+  }
+
+  ngOnDestroy() {
+    // this.navSubscription$.unsubscribe();
   }
 }

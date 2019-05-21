@@ -1,0 +1,44 @@
+@import '~src/styles/common/index'
+
+// Swiper styles in /app/components/portfolio
+.portfolio
+  .swiper
+    overflow: hidden
+
+  .swiper > .swiper.s-wrapper
+    position: static
+
+  .swiper-container
+    position: static
+    padding: 64px 0
+
+  .swiper-slide
+    pointer-events: none
+    transition: transform 0.4s ease-in-out
+
+  .swiper-slide-next
+    transform: scale(1.15)
+    box-shadow: 0 0 40px rgba($dark, 0.1)
+    z-index: 2
+
+  .swiper-button-prev,
+  .swiper-button-next
+    width: 80px
+    height: 80px
+    margin-top: -40px
+    background-image: url('/assets/blocks/slider/arrow.png')
+    background-size: 80px 80px
+    box-shadow: 0 0 40px rgba($dark, 0.05)
+    border-radius: 100%
+    transition: opacity 0.2s, box-shadow 0.2s ease-out
+    z-index: 1
+
+    &:hover
+      box-shadow: 0 0 40px rgba($dark, 0.15)
+
+  .swiper-button-prev
+    left: 0
+
+  .swiper-button-next
+    transform: rotate(180deg)
+    right: 0
