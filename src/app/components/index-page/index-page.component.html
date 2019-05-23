@@ -5,7 +5,7 @@
 
   <div class="main__home">
 
-    <app-navigation></app-navigation>
+    <app-navigation (onMenuStateChange)="menuState($event)"></app-navigation>
 
     <router-outlet></router-outlet>
 

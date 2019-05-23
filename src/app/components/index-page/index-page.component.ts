@@ -10,6 +10,7 @@ import { particleParams, particleStyles } from './particle.config';
 export class IndexPageComponent implements OnInit, AfterViewInit {
   particleStyles: object = particleStyles;
   particleParams: object = particleParams;
+  // menuState: string;
 
   constructor() {}
 
@@ -17,5 +18,9 @@ export class IndexPageComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     // gradient();
+  }
+
+  menuState(e) {
+    console.log(e);
   }
 }
