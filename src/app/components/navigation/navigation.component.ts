@@ -5,8 +5,11 @@ import {
   ViewChild,
   ElementRef,
   Output,
-  EventEmitter
+  EventEmitter,
+  OnDestroy
 } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { WindowDimensionsService } from '../../services/window-dimensions.service';
 import { toggleMenu } from './navigation.animation';
 
 @Component({
@@ -15,26 +18,57 @@ import { toggleMenu } from './navigation.animation';
   styleUrls: ['./navigation.component.sass'],
   animations: [toggleMenu]
 })
-export class NavigationComponent implements OnInit {
+export class NavigationComponent implements OnInit, OnDestroy {
   @ViewChild('navMenu') navMenu: ElementRef;
   @ViewChild('hamburger') hamburger: ElementRef;
-  @Output() onMenuStateChange = new EventEmitter<string>();
+  @Output() onContentStateChange = new EventEmitter<string>();
 
   hamburgerNativeEl: HTMLElement;
+  menuState: string = 'hidden';
+  contentState: string = 'visible';
+  windowDimsSub$: Subscription;
+  windowWidth: number;
 
-  menuState: string = 'opened';
-
-  constructor(private renderer: Renderer2) {}
+  constructor(private renderer: Renderer2, private winDim: WindowDimensionsService) {}
 
   ngOnInit() {
     this.hamburgerNativeEl = this.hamburger.nativeElement;
+    this.windowDimsSub$ = this.winDim.windowSizeChanged.subscribe(dims => {
+      this.windowWidth = dims.width;
+      if (this.windowWidth > 638) {
+        this.onContentStateChange.emit('visible');
+      } else if (this.menuState === 'visible') {
+        this.onContentStateChange.emit('hidden');
+      }
+    });
+  }
+
+  ngOnDestroy() {
+    this.windowDimsSub$.unsubscribe();
+  }
+
+  onNavEvent() {
+    this.onMenuClick();
   }
 
   onMenuClick() {
+    this.toggleHamburgerAnimation();
+    this.changeNavMenuState();
+    this.windowWidth < 639 && this.changeContentState();
+  }
+
+  toggleHamburgerAnimation() {
     this.hamburgerNativeEl.classList.contains('hamburger--active')
       ? this.renderer.removeClass(this.hamburgerNativeEl, 'hamburger--active')
       : this.renderer.addClass(this.hamburgerNativeEl, 'hamburger--active');
-    this.menuState = this.menuState === 'opened' ? 'closed' : 'opened';
-    this.onMenuStateChange.emit(this.menuState);
+  }
+
+  changeNavMenuState() {
+    this.menuState = this.menuState === 'hidden' ? 'visible' : 'hidden';
+  }
+
+  changeContentState() {
+    this.contentState = this.contentState === 'hidden' ? 'visible' : 'hidden';
+    this.onContentStateChange.emit(this.contentState);
   }
 }

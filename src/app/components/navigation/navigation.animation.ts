@@ -2,7 +2,7 @@ import { state, style, trigger } from '@angular/animations';
 
 export const toggleMenu = trigger('toggleMenu', [
   state(
-    'opened',
+    'hidden',
     style({
       opacity: 0,
       transform: 'translateX(-25px)',
@@ -10,7 +10,7 @@ export const toggleMenu = trigger('toggleMenu', [
     })
   ),
   state(
-    'closed',
+    'visible',
     style({
       opacity: 1,
       transform: 'translateX(0)',

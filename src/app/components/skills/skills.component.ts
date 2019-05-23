@@ -1,13 +1,12 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { NavigationService } from 'src/app/services/navigation.service';
 
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.sass']
 })
-export class SkillsComponent implements OnInit, OnDestroy {
+export class SkillsComponent implements OnInit {
   tippyOptions = {
     placement: 'top',
     arrow: false,
@@ -21,15 +20,7 @@ export class SkillsComponent implements OnInit, OnDestroy {
   navSubscription$: Subscription;
   menuState: string;
 
-  constructor(private navService: NavigationService) {}
+  constructor() {}
 
-  ngOnInit() {
-    // this.navSubscription$ = this.navService.currentMenuState.subscribe(
-    // menuState => (this.menuState = menuState)
-    // );
-  }
-
-  ngOnDestroy() {
-    // this.navSubscription$.unsubscribe();
-  }
+  ngOnInit() {}
 }

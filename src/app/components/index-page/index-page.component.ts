@@ -10,17 +10,17 @@ import { particleParams, particleStyles } from './particle.config';
 export class IndexPageComponent implements OnInit, AfterViewInit {
   particleStyles: object = particleStyles;
   particleParams: object = particleParams;
-  // menuState: string;
+  contentState: string = 'visible';
 
   constructor() {}
 
   ngOnInit() {}
 
   ngAfterViewInit() {
-    // gradient();
+    gradient();
   }
 
-  menuState(e) {
-    console.log(e);
+  onContentStateChange(contentState: string) {
+    this.contentState = contentState;
   }
 }

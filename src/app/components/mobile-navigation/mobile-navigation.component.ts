@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-mobile-navigation',
@@ -6,11 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mobile-navigation.component.sass']
 })
 export class MobileNavigationComponent implements OnInit {
+  @Output() onNavEvent = new EventEmitter<string>();
+
   constructor() {}
 
   ngOnInit() {}
 
-  onMenuItemClick(event: MouseEvent) {
-    console.log(event);
+  onMenuItemClick() {
+    this.onNavEvent.emit('hidden');
   }
 }

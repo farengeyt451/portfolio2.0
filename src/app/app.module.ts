@@ -9,7 +9,6 @@ import { TippyModule } from 'ng-tippy';
 import { MatTabsModule } from '@angular/material';
 import { NgxSmartModalModule } from 'ngx-smart-modal';
 import { AppRoutingModule } from './app-routing.module';
-import { NavigationService } from './services/navigation.service';
 import { AppComponent } from './app.component';
 import { IndexPageComponent } from './components/index-page';
 import { HomeComponent } from './components/home';
@@ -43,11 +42,7 @@ import { WindowDimensionsService } from './services/window-dimensions.service';
     MatTabsModule,
     NgxSmartModalModule.forRoot()
   ],
-  providers: [
-    NavigationService,
-    { provide: 'windowObject', useValue: window },
-    WindowDimensionsService
-  ],
+  providers: [{ provide: 'windowObject', useValue: window }, WindowDimensionsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -5,9 +5,9 @@
 
   <div class="main__home">
 
-    <app-navigation (onMenuStateChange)="menuState($event)"></app-navigation>
+    <app-navigation (onContentStateChange)="onContentStateChange($event)"></app-navigation>
 
-    <router-outlet></router-outlet>
+    <router-outlet *ngIf="contentState === 'visible'"></router-outlet>
 
   </div>
 </div>

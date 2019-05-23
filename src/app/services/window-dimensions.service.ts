@@ -12,7 +12,7 @@ export class WindowDimensionsService {
   constructor(@Inject('windowObject') private window: Window) {
     fromEvent(window, 'resize')
       .pipe(
-        throttleTime(500),
+        throttleTime(150),
         map(
           event =>
             <WindowSize>{
