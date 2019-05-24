@@ -36,9 +36,11 @@ export class NavigationComponent implements OnInit, OnDestroy {
     this.windowDimsSub$ = this.winDim.windowSizeChanged.subscribe(dims => {
       this.windowWidth = dims.width;
       if (this.windowWidth > 638) {
-        this.onContentStateChange.emit('visible');
+        this.contentState = 'visible';
+        this.onContentStateChange.emit(this.contentState);
       } else if (this.menuState === 'visible') {
-        this.onContentStateChange.emit('hidden');
+        this.contentState = 'hidden';
+        this.onContentStateChange.emit(this.contentState);
       }
     });
   }
