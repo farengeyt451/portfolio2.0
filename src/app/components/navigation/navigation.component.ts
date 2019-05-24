@@ -35,7 +35,7 @@ export class NavigationComponent implements OnInit, OnDestroy {
     this.hamburgerNativeEl = this.hamburger.nativeElement;
     this.windowDimsSub$ = this.winDim.windowSizeChanged.subscribe(dims => {
       this.windowWidth = dims.width;
-      if (this.windowWidth > 638) {
+      if (this.windowWidth > 639) {
         this.contentState = 'visible';
         this.onContentStateChange.emit(this.contentState);
       } else if (this.menuState === 'visible') {
@@ -56,7 +56,7 @@ export class NavigationComponent implements OnInit, OnDestroy {
   onMenuClick() {
     this.toggleHamburgerAnimation();
     this.changeNavMenuState();
-    this.windowWidth < 639 && this.changeContentState();
+    this.windowWidth < 640 && this.changeContentState();
   }
 
   toggleHamburgerAnimation() {
