@@ -10,15 +10,15 @@ export const swiperConfig: SwiperConfigInterface = {
   keyboard: true,
   slideToClickedSlide: false,
   breakpoints: {
-    1200: {
-      slidesPerView: 3,
-      spaceBetween: 10
+    1100: {
+      spaceBetween: 35
     },
-    768: {
+    991: {
       slidesPerView: 2
     },
-    480: {
-      slidesPerView: 1
+    768: {
+      slidesPerView: 1,
+      centeredSlides: true
     }
   }
 };

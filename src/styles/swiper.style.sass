@@ -5,8 +5,23 @@
   .swiper
     overflow: hidden
 
-  .swiper > .swiper.s-wrapper
-    position: static
+  swiper > .swiper.s-wrapper
+    +media($mobile-lg)
+      position: relative
+      width: 65%
+      margin: 0 auto
+      padding: 0 30px
+
+    +media($mobile-md)
+      width: 70%
+
+    +media(581px)
+      width: 80%
+
+    +media($mobile-sm)
+      box-sizing: border-box
+      width: 100%
+      // padding: 0
 
   .swiper-container
     position: static
@@ -20,6 +35,9 @@
     transform: scale(1.15)
     box-shadow: 0 0 40px rgba($dark, 0.1)
     z-index: 2
+
+    +media($tablet)
+      transform: scale(1)
 
   .swiper-button-prev,
   .swiper-button-next
@@ -36,9 +54,29 @@
     &:hover
       box-shadow: 0 0 40px rgba($dark, 0.15)
 
+    +media($laptop-sm)
+      width: 60px
+      height: 60px
+      background-size: 60px 60px
+
+    +media($mobile-sm)
+      // display: none
+
   .swiper-button-prev
     left: 0
+
+    +media($laptop-sm)
+      left: 15px
+
+    +media($mobile-lg)
+      left: 0
 
   .swiper-button-next
     transform: rotate(180deg)
     right: 0
+
+    +media($laptop-sm)
+      right: 15px
+
+    +media($mobile-lg)
+      right: 0
