@@ -36,10 +36,14 @@
 .mob__link
   font-family: $font-main
   font-size: 35px
-  line-height: 48px
+  line-height: 45px
   text-decoration: none
   color: $light
   transition: color 0.2s ease
 
   &:hover
     color: #feb144
+
+  +media($mobile-sm)
+    font-size: 28px
+    line-height: 1

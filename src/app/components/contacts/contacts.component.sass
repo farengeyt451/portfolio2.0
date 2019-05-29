@@ -8,6 +8,9 @@
   margin-top: 20vh
   z-index: 1
 
+  +media($tablet)
+    flex-wrap: wrap
+
 .contacts__item
   flex-basis: 25%
   text-align: center
@@ -22,6 +25,11 @@
   @for $i from 1 through 4
     &:nth-child(#{$i})
       animation-delay: #{$i * 0.1}s
+
+  +media($tablet)
+    flex-basis: 50%
+    margin-left: 0
+    margin-bottom: 50px
 
 /deep/
   .contacts__icon

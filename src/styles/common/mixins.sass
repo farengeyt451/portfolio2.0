@@ -38,6 +38,10 @@
   @media screen and (max-width: $resolution)
     @content
 
+=media-min($resolution)
+  @media screen and (min-width: $resolution)
+    @content
+
 =media-2d($width, $height)
   @media screen and (max-width: $width) and (max-height: $height)
     @content

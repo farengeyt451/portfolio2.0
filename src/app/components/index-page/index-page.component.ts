@@ -17,7 +17,7 @@ export class IndexPageComponent implements OnInit, AfterViewInit {
   ngOnInit() {}
 
   ngAfterViewInit() {
-    // gradient();
+    gradient();
   }
 
   onContentStateChange(contentState: string) {

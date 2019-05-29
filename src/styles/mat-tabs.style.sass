@@ -3,7 +3,15 @@
 // Mat-tab styles in /app/components/skills
 .skills
   .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar
+    background-color: transparent
     height: 1px
+
+  .mat-tab-body-content
+     overflow: hidden
+
+  .mat-tab-label-container
+    +media(1024px)
+      padding: 0 20px
 
   .mat-tab-label
     color: $light
@@ -19,15 +27,23 @@
       color: $third
       opacity: 1
 
+    +media(1024px)
+      margin-bottom: 0
 
   .mat-tab-label-active
     color: $third
     opacity: 1
 
   .mat-tab-header-pagination-disabled .mat-tab-header-pagination-chevron
-    border-color: rgba(255, 255, 255, 0.38)
+    border-color: rgba($light, 0.5)
+
+  .mat-tab-header-pagination-chevron
+    height: 12px
+    width: 12px
+    border-color: rgba($light, 1)
 
   .mat-elevation-z4
     box-shadow: none
 
-
+  .mat-tab-header
+    border-bottom: none
