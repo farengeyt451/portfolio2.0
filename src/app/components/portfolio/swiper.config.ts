@@ -14,11 +14,18 @@ export const swiperConfig: SwiperConfigInterface = {
       spaceBetween: 35
     },
     991: {
-      slidesPerView: 2
+      slidesPerView: 2,
+      spaceBetween: 35
     },
     768: {
-      slidesPerView: 1,
-      centeredSlides: true
+      slidesPerView: 'auto',
+      spaceBetween: 35,
+      speed: 200
+    },
+    479: {
+      slidesPerView: 'auto',
+      spaceBetween: 25,
+      speed: 250
     }
   }
 };

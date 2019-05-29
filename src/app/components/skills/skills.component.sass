@@ -30,6 +30,7 @@
 .skill__content
   margin-top: 40px
   margin-left: 55px
+  overflow: hidden
 
 .skills__item
   display: inline-block
@@ -45,31 +46,32 @@
   height: 100%
 
 // Styles for vertical tabs
-\:host
-  >.container
-    max-width: 1264px
-    width: 100%
-    margin: 0 auto
-    display: flex
-    justify-content: space-between
-    background: none
+@media screen and (min-width: 1024px)
+  \:host
+    >.container
+      max-width: 1264px
+      width: 100%
+      margin: 0 auto
+      display: flex
+      justify-content: space-between
+      background: none
 
-  /deep/
-    .mat-tab-group
-      flex-direction: row
+    /deep/
+      .mat-tab-group
+        flex-direction: row
 
-    .mat-tab-header
-      border-bottom: none
+      .mat-tab-header
+        border-bottom: none
 
-    .mat-tab-header-pagination
-      display: none !important
+      .mat-tab-header-pagination
+        display: none !important
 
-    .mat-tab-labels
-      flex-direction: column
+      .mat-tab-labels
+        flex-direction: column
 
-    .mat-ink-bar
-      height: 100%
-      left: 98% !important
+      .mat-ink-bar
+        height: 100%
+        left: 98% !important
 
-    .mat-tab-body-wrapper
-      flex: 1 1 auto
+      .mat-tab-body-wrapper
+        flex: 1 1 auto

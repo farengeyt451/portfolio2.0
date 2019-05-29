@@ -4,13 +4,13 @@
 .portfolio
   position: relative
   margin-top: 25px
-  padding: 0 45px
+  padding: 0 40px
   opacity: 0
   animation: fade-in-top 0.75s ease, show 0.5s ease 0.25s
   animation-delay: 0.2s
   animation-fill-mode: forwards
 
-  +media($mobile-sm)
+  +media($mobile-lg)
     padding: 0
 
 .slide
@@ -60,6 +60,9 @@
 
   +media($laptop-sm)
     width: 80px
+
+  +media($tablet)
+    width: 65px
 
 .slide__name
   margin: 40px 0

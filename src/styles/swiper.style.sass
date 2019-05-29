@@ -5,23 +5,22 @@
   .swiper
     overflow: hidden
 
+  swiper > .swiper.s-wrapper .swiper-wrapper .swiper-slide
+    +media($mobile-lg)
+      width: 270px !important
+
+    +media($mobile-sm)
+      width: 260px !important
+
   swiper > .swiper.s-wrapper
     +media($mobile-lg)
       position: relative
-      width: 65%
+      width: 100%
       margin: 0 auto
-      padding: 0 30px
-
-    +media($mobile-md)
-      width: 70%
-
-    +media(581px)
-      width: 80%
+      padding: 0
 
     +media($mobile-sm)
       box-sizing: border-box
-      width: 100%
-      // padding: 0
 
   .swiper-container
     position: static
@@ -59,8 +58,8 @@
       height: 60px
       background-size: 60px 60px
 
-    +media($mobile-sm)
-      // display: none
+    +media($mobile-lg)
+      display: none
 
   .swiper-button-prev
     left: 0
