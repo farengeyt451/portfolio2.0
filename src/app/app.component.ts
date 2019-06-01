@@ -7,9 +7,11 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  mainTitle: string = 'Portfolio - Alexander Kislov';
+
   constructor(private titleService: Title) {}
 
   ngOnInit() {
-    this.titleService.setTitle('Portfolio 2.0');
+    this.titleService.setTitle(this.mainTitle);
   }
 }

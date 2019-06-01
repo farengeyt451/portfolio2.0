@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-skills',
@@ -19,8 +20,11 @@ export class SkillsComponent implements OnInit {
   };
   navSubscription$: Subscription;
   menuState: string;
+  skillsTitle: string = 'Skills';
 
-  constructor() {}
+  constructor(private titleService: Title) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.titleService.setTitle(this.skillsTitle);
+  }
 }
