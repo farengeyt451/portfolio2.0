@@ -26,7 +26,6 @@
     "core-js": "^2.5.4",
     "ng-inline-svg": "^8.4.1",
     "ng-tippy": "^3.2.2",
-    "ngx-smart-modal": "^7.1.1",
     "ngx-swiper-wrapper": "^7.2.1",
     "normalize.css": "^8.0.1",
     "rxjs": "~6.3.3",

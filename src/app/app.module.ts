@@ -7,7 +7,6 @@ import { ParticlesModule } from 'angular-particle';
 import { SwiperModule } from 'ngx-swiper-wrapper';
 import { TippyModule } from 'ng-tippy';
 import { MatTabsModule } from '@angular/material';
-import { NgxSmartModalModule } from 'ngx-smart-modal';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IndexPageComponent } from './components/index-page';
@@ -18,6 +17,7 @@ import { SkillsComponent } from './components/skills';
 import { ContactsComponent } from './components/contacts';
 import { MobileNavigationComponent } from './components/mobile-navigation';
 import { WindowDimensionsService } from './services/window-dimensions.service';
+import { ZenService } from './services/zen.service';
 
 @NgModule({
   declarations: [
@@ -39,10 +39,9 @@ import { WindowDimensionsService } from './services/window-dimensions.service';
     BrowserAnimationsModule,
     SwiperModule,
     TippyModule,
-    MatTabsModule,
-    NgxSmartModalModule.forRoot()
+    MatTabsModule
   ],
-  providers: [{ provide: 'windowObject', useValue: window }, WindowDimensionsService],
+  providers: [{ provide: 'windowObject', useValue: window }, WindowDimensionsService, ZenService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

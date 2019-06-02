@@ -28,7 +28,7 @@ export const particleParams = {
         color: '#000000'
       },
       polygon: {
-        nb_sides: 5
+        nb_sides: 7
       },
       image: {
         src: 'img/github.svg',
@@ -67,7 +67,7 @@ export const particleParams = {
       enable: true,
       speed: 2,
       direction: 'none',
-      random: false,
+      random: true,
       straight: false,
       out_mode: 'out',
       bounce: false,

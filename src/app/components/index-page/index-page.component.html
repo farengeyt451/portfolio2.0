@@ -1,13 +1,15 @@
 <div class="main">
-  <div class="main__particle" id="gradient">
-    <particles [style]="particleStyles" [params]="particleParams"></particles>
+  <div class="main__particle particle-network-animation" id="gradient" >
+    <!-- <particles [style]="particleStyles" [params]="particleParams"></particles> -->
   </div>
 
-  <div class="main__home">
+  <div class="main__home" *ngIf="zenState">
 
     <app-navigation (onContentStateChange)="onContentStateChange($event)"></app-navigation>
 
     <router-outlet *ngIf="contentState === 'visible'"></router-outlet>
 
   </div>
+
+  <button (click)="onCloseZen()" *ngIf="!zenState" class="main__back">Go Back</button>
 </div>
