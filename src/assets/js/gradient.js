@@ -2,7 +2,7 @@ export function gradient() {
   var mainContainer = document.getElementById('gradient');
   // rgb vals of the gradients
   var gradients = [
-    { start: [58, 123, 213], stop: [58, 96, 115] },
+    { start: [22, 126, 213], stop: [58, 96, 115] },
     { start: [58, 96, 115], stop: [142, 45, 226] },
     { start: [142, 45, 226], stop: [74, 0, 224] }
   ];

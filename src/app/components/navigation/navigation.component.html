@@ -16,7 +16,8 @@
       </li>
     </ul>
 
-    <app-mobile-navigation *ngIf="menuState === 'visible'" (onNavEvent)=onNavEvent()></app-mobile-navigation>
+    <app-mobile-navigation *ngIf="menuState === 'visible'" (onNavEvent)=onNavEvent()>
+    </app-mobile-navigation>
 
     <div class="hamburger nav__toggle" (click)="onMenuClick()" #hamburger>
 

@@ -1,9 +1,9 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { gradient } from 'src/assets/js/gradient.js';
-import { particle } from 'src/assets/js/particle.js';
-import { particleParams, particleStyles } from './particle.config';
-import { ZenService } from '../../services/zen.service';
 import { Subscription } from 'rxjs';
+import { gradient } from '../../../assets/js/gradient.js';
+import { particle } from '../../../assets/js/particle.js';
+// import { particleParams, particleStyles } from './particle.config';
+import { ZenService } from '../../services/zen.service';
 
 @Component({
   selector: 'app-index-page',
@@ -11,8 +11,8 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./index-page.component.sass']
 })
 export class IndexPageComponent implements OnInit, AfterViewInit {
-  particleStyles: object = particleStyles;
-  particleParams: object = particleParams;
+  // particleStyles: object = particleStyles;
+  // particleParams: object = particleParams;
   contentState: string = 'visible';
   zenSubscribtion: Subscription;
   zenState: boolean;
@@ -21,14 +21,13 @@ export class IndexPageComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.zenSubscribtion = this.zen.currentZenState.subscribe(zenState => {
-      console.log('zenState', zenState);
       this.zenState = zenState;
     });
   }
 
   ngAfterViewInit() {
     setTimeout(() => {
-      // gradient();
+      gradient();
       particle();
     }, 0);
   }
@@ -39,6 +38,5 @@ export class IndexPageComponent implements OnInit, AfterViewInit {
 
   onCloseZen() {
     this.zenState = true;
-    console.log('this.zenState', this.zenState);
   }
 }
