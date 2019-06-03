@@ -18,6 +18,7 @@ import { ContactsComponent } from './components/contacts';
 import { MobileNavigationComponent } from './components/mobile-navigation';
 import { WindowDimensionsService } from './services/window-dimensions.service';
 import { ZenService } from './services/zen.service';
+import { ZenButtonComponent } from './components/zen-button';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ZenService } from './services/zen.service';
     PortfolioComponent,
     SkillsComponent,
     ContactsComponent,
-    MobileNavigationComponent
+    MobileNavigationComponent,
+    ZenButtonComponent
   ],
   imports: [
     BrowserModule,
