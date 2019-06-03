@@ -28,8 +28,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## TODO
 
-1. Add preloader
-2. Add routing animation
-3. Add relax button :)
-4. Vertical align middle for pages
-5. Delete ngx smart modal
+1. Add metric
+2. Test
