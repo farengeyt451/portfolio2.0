@@ -15,7 +15,6 @@ export class SkillsComponent implements OnInit {
     theme: 'skill',
     trigger: 'mouseenter',
     delay: [100, 100],
-    flipOnUpdate: true,
     sticky: true
   };
   navSubscription$: Subscription;
