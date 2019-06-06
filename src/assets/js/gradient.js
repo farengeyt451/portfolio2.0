@@ -2,9 +2,9 @@ export function gradient() {
   var mainContainer = document.getElementById('gradient');
   // rgb vals of the gradients
   var gradients = [
-    { start: [22, 126, 213], stop: [58, 96, 115] },
-    { start: [58, 96, 115], stop: [142, 45, 226] },
-    { start: [142, 45, 226], stop: [74, 0, 224] }
+    { start: [22, 126, 213], stop: [142, 45, 226] },
+    { start: [142, 45, 226], stop: [16, 76, 105] },
+    { start: [16, 76, 105], stop: [74, 0, 224] }
   ];
   // how long for each transition
   var transition_time = 50;

@@ -14,8 +14,7 @@ export class SkillsComponent implements OnInit {
     animation: 'shift-toward',
     theme: 'skill',
     trigger: 'mouseenter',
-    delay: [100, 100],
-    sticky: true
+    delay: [200, 50]
   };
   navSubscription$: Subscription;
   menuState: string;
