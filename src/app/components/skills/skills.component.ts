@@ -29,13 +29,11 @@ export class SkillsComponent implements OnInit {
 
   onSwipeLeft() {
     if (this.selectedTab !== 6) {
-      console.log('onSwipeLeft');
       this.selectedTab = this.selectedTab + 1;
     }
   }
   onSwipeRight() {
     if (this.selectedTab !== 0) {
-      console.log('onSwipeRight');
       this.selectedTab = this.selectedTab - 1;
     }
   }
