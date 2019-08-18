@@ -5,12 +5,12 @@
 
     <mat-tab>
       <ng-template mat-tab-label>
-          <span class="skill__tab skill__tab--upper">html</span>
+          <span class="skill__tab skill__tab--upper" (click)="onTabSelect(0)">html</span>
       </ng-template>
       <ng-template matTabContent>
         <div class="skill__content"
-             (swipeleft)="onSwipeLeft($event)"
-             (swiperight)="onSwipeRight($event)">
+             (swipeleft)="onSwipeLeft()"
+             (swiperight)="onSwipeRight()">
           <div class="skills__item" title="HTML5" appTippy [tippyOptions]="tippyOptions">
             <img class="skills__img" src="/assets/blocks/skills/html5.svg" alt="html5">
           </div>
@@ -23,11 +23,11 @@
 
     <mat-tab>
       <ng-template mat-tab-label>
-          <span class="skill__tab skill__tab--upper">css</span>
+          <span class="skill__tab skill__tab--upper" (click)="onTabSelect(1)">css</span>
       </ng-template>
       <div class="skill__content"
-           (swipeleft)="onSwipeLeft($event)"
-           (swiperight)="onSwipeRight($event)">
+           (swipeleft)="onSwipeLeft()"
+           (swiperight)="onSwipeRight()">
         <div class="skills__item" title="CSS3" appTippy [tippyOptions]="tippyOptions">
           <img class="skills__img" src="/assets/blocks/skills/css3.svg" alt="css3">
         </div>
@@ -45,11 +45,11 @@
 
     <mat-tab>
       <ng-template mat-tab-label>
-          <span class="skill__tab">JavaScript</span>
+          <span class="skill__tab" (click)="onTabSelect(2)">JavaScript</span>
       </ng-template>
         <div class="skill__content"
-             (swipeleft)="onSwipeLeft($event)"
-             (swiperight)="onSwipeRight($event)">
+             (swipeleft)="onSwipeLeft()"
+             (swiperight)="onSwipeRight()">
         <div class="skills__item" title="JS (ES5, ES6)" appTippy [tippyOptions]="tippyOptions">
           <img class="skills__img" src="/assets/blocks/skills/js.svg" alt="js">
         </div>
@@ -70,11 +70,11 @@
 
     <mat-tab>
       <ng-template mat-tab-label>
-          <span class="skill__tab">Build Tools</span>
+          <span class="skill__tab" (click)="onTabSelect(3)">Build Tools</span>
       </ng-template>
       <div class="skill__content"
-           (swipeleft)="onSwipeLeft($event)"
-           (swiperight)="onSwipeRight($event)">
+           (swipeleft)="onSwipeLeft()"
+           (swiperight)="onSwipeRight()">
         <div class="skills__item" title="Webpack" appTippy [tippyOptions]="tippyOptions">
           <img class="skills__img" src="/assets/blocks/skills/webpack.svg" alt="webpack">
         </div>
@@ -86,11 +86,11 @@
 
     <mat-tab>
       <ng-template mat-tab-label>
-          <span class="skill__tab">Package Managers</span>
+          <span class="skill__tab" (click)="onTabSelect(4)">Package Managers</span>
       </ng-template>
       <div class="skill__content"
-           (swipeleft)="onSwipeLeft($event)"
-           (swiperight)="onSwipeRight($event)">
+           (swipeleft)="onSwipeLeft()"
+           (swiperight)="onSwipeRight()">
         <div class="skills__item" title="NPM" appTippy [tippyOptions]="tippyOptions">
           <img class="skills__img" src="/assets/blocks/skills/npm.svg" alt="npm">
         </div>
@@ -102,11 +102,11 @@
 
     <mat-tab>
       <ng-template mat-tab-label>
-          <span class="skill__tab">VSC & Hubs</span>
+          <span class="skill__tab" (click)="onTabSelect(5)">VSC & Hubs</span>
       </ng-template>
       <div class="skill__content"
-           (swipeleft)="onSwipeLeft($event)"
-           (swiperight)="onSwipeRight($event)">
+           (swipeleft)="onSwipeLeft()"
+           (swiperight)="onSwipeRight()">
         <div class="skills__item" title="Git" appTippy [tippyOptions]="tippyOptions">
           <img class="skills__img" src="/assets/blocks/skills/git.svg" alt="git">
         </div>
@@ -121,11 +121,11 @@
 
     <mat-tab>
       <ng-template mat-tab-label>
-          <span class="skill__tab">OS & Apps</span>
+          <span class="skill__tab" (click)="onTabSelect(6)">OS & Apps</span>
       </ng-template>
       <div class="skill__content"
-           (swipeleft)="onSwipeLeft($event)"
-           (swiperight)="onSwipeRight($event)">
+           (swipeleft)="onSwipeLeft()"
+           (swiperight)="onSwipeRight()">
         <div class="skills__item" title="Linux" appTippy [tippyOptions]="tippyOptions">
           <img class="skills__img" src="/assets/blocks/skills/linux.svg" alt="linux">
         </div>

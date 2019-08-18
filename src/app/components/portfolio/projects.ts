@@ -13,7 +13,7 @@ export const projects = [
       'Angular plugin, that allows us to implement parallax effect for some element in page',
     tags: ['html5', 'css3', 'js', 'pug', 'sass'],
     logo: '/assets/blocks/portfolio/ngx-parallax-scroll.svg',
-    link: 'https://alexander-kislov.github.io/air-tickets-page/',
+    link: 'https://github.com/farengeyt451/ngx-parallax-scroll',
     year: '2019'
   },
   {

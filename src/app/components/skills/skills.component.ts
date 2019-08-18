@@ -27,11 +27,16 @@ export class SkillsComponent implements OnInit {
     this.titleService.setTitle(this.skillsTitle);
   }
 
+  onTabSelect(index: number) {
+    this.selectedTab = index;
+  }
+
   onSwipeLeft() {
     if (this.selectedTab !== 6) {
       this.selectedTab = this.selectedTab + 1;
     }
   }
+
   onSwipeRight() {
     if (this.selectedTab !== 0) {
       this.selectedTab = this.selectedTab - 1;
