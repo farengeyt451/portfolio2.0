@@ -10,6 +10,7 @@ export const swiperConfig: SwiperConfigInterface = {
   navigation: true,
   keyboard: true,
   slideToClickedSlide: false,
+
   breakpoints: {
     1100: {
       spaceBetween: 35

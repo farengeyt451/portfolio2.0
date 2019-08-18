@@ -4,7 +4,7 @@ export function particle() {
   var main = document.getElementById('gradient');
   var that;
 
-  main.addEventListener('contextmenu', event => event.preventDefault());
+  // main.addEventListener('contextmenu', event => event.preventDefault());
 
   ParticleNetworkAnimation = PNA = function() {};
 
@@ -81,9 +81,9 @@ export function particle() {
 
   var ParticleNetwork = function(parent) {
     this.options = {
-      velocity: 1, // the higher the faster
-      density: 20000, // the lower the denser
-      netLineDistance: 180,
+      velocity: 0.75, // the higher the faster
+      density: 40000, // the lower the denser
+      netLineDistance: 0,
       netLineColor: '#ffffff',
       particleColors: ['#ffffff']
     };

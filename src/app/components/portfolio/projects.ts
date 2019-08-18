@@ -8,6 +8,15 @@ export const projects = [
     year: '2018'
   },
   {
+    name: 'Ngx-Parallax-Scroll',
+    description:
+      'Angular plugin, that allows us to implement parallax effect for some element in page',
+    tags: ['html5', 'css3', 'js', 'pug', 'sass'],
+    logo: '/assets/blocks/portfolio/ngx-parallax-scroll.svg',
+    link: 'https://alexander-kislov.github.io/air-tickets-page/',
+    year: '2019'
+  },
+  {
     name: 'Air Tickets Page',
     description: 'Air Tickets Page — dynamic page for tickets pick, made with Angular',
     tags: ['html5', 'css3', 'js', 'pug', 'sass'],
