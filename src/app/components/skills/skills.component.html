@@ -1,13 +1,16 @@
-<div class="skills">
+<div class="skills"
+>
 
-  <mat-tab-group mat-align-tabs="center" disableRipple animationDuration="700">
+  <mat-tab-group mat-align-tabs="center" disableRipple animationDuration="700" [selectedIndex]="selectedTab">
 
     <mat-tab>
       <ng-template mat-tab-label>
           <span class="skill__tab skill__tab--upper">html</span>
       </ng-template>
       <ng-template matTabContent>
-        <div class="skill__content">
+        <div class="skill__content"
+             (swipeleft)="onSwipeLeft($event)"
+             (swiperight)="onSwipeRight($event)">
           <div class="skills__item" title="HTML5" appTippy [tippyOptions]="tippyOptions">
             <img class="skills__img" src="/assets/blocks/skills/html5.svg" alt="html5">
           </div>
@@ -22,7 +25,9 @@
       <ng-template mat-tab-label>
           <span class="skill__tab skill__tab--upper">css</span>
       </ng-template>
-      <div class="skill__content">
+      <div class="skill__content"
+           (swipeleft)="onSwipeLeft($event)"
+           (swiperight)="onSwipeRight($event)">
         <div class="skills__item" title="CSS3" appTippy [tippyOptions]="tippyOptions">
           <img class="skills__img" src="/assets/blocks/skills/css3.svg" alt="css3">
         </div>
@@ -42,7 +47,9 @@
       <ng-template mat-tab-label>
           <span class="skill__tab">JavaScript</span>
       </ng-template>
-        <div class="skill__content">
+        <div class="skill__content"
+             (swipeleft)="onSwipeLeft($event)"
+             (swiperight)="onSwipeRight($event)">
         <div class="skills__item" title="JS (ES5, ES6)" appTippy [tippyOptions]="tippyOptions">
           <img class="skills__img" src="/assets/blocks/skills/js.svg" alt="js">
         </div>
@@ -65,7 +72,9 @@
       <ng-template mat-tab-label>
           <span class="skill__tab">Build Tools</span>
       </ng-template>
-      <div class="skill__content">
+      <div class="skill__content"
+           (swipeleft)="onSwipeLeft($event)"
+           (swiperight)="onSwipeRight($event)">
         <div class="skills__item" title="Webpack" appTippy [tippyOptions]="tippyOptions">
           <img class="skills__img" src="/assets/blocks/skills/webpack.svg" alt="webpack">
         </div>
@@ -79,7 +88,9 @@
       <ng-template mat-tab-label>
           <span class="skill__tab">Package Managers</span>
       </ng-template>
-      <div class="skill__content">
+      <div class="skill__content"
+           (swipeleft)="onSwipeLeft($event)"
+           (swiperight)="onSwipeRight($event)">
         <div class="skills__item" title="NPM" appTippy [tippyOptions]="tippyOptions">
           <img class="skills__img" src="/assets/blocks/skills/npm.svg" alt="npm">
         </div>
@@ -93,7 +104,9 @@
       <ng-template mat-tab-label>
           <span class="skill__tab">VSC & Hubs</span>
       </ng-template>
-      <div class="skill__content">
+      <div class="skill__content"
+           (swipeleft)="onSwipeLeft($event)"
+           (swiperight)="onSwipeRight($event)">
         <div class="skills__item" title="Git" appTippy [tippyOptions]="tippyOptions">
           <img class="skills__img" src="/assets/blocks/skills/git.svg" alt="git">
         </div>
@@ -110,7 +123,9 @@
       <ng-template mat-tab-label>
           <span class="skill__tab">OS & Apps</span>
       </ng-template>
-      <div class="skill__content">
+      <div class="skill__content"
+           (swipeleft)="onSwipeLeft($event)"
+           (swiperight)="onSwipeRight($event)">
         <div class="skills__item" title="Linux" appTippy [tippyOptions]="tippyOptions">
           <img class="skills__img" src="/assets/blocks/skills/linux.svg" alt="linux">
         </div>

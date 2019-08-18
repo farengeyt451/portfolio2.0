@@ -19,10 +19,24 @@ export class SkillsComponent implements OnInit {
   navSubscription$: Subscription;
   menuState: string;
   skillsTitle: string = 'Skills';
+  selectedTab = 0;
 
   constructor(private titleService: Title) {}
 
   ngOnInit() {
     this.titleService.setTitle(this.skillsTitle);
+  }
+
+  onSwipeLeft() {
+    if (this.selectedTab !== 6) {
+      console.log('onSwipeLeft');
+      this.selectedTab = this.selectedTab + 1;
+    }
+  }
+  onSwipeRight() {
+    if (this.selectedTab !== 0) {
+      console.log('onSwipeRight');
+      this.selectedTab = this.selectedTab - 1;
+    }
   }
 }

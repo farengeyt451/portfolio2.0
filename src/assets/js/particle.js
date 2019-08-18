@@ -82,7 +82,7 @@ export function particle() {
   var ParticleNetwork = function(parent) {
     this.options = {
       velocity: 0.75, // the higher the faster
-      density: 40000, // the lower the denser
+      density: 48000, // the lower the denser
       netLineDistance: 0,
       netLineColor: '#ffffff',
       particleColors: ['#ffffff']

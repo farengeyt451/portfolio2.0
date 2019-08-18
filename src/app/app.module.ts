@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { InlineSVGModule } from 'ng-inline-svg';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ParticlesModule } from 'angular-particle';
 import { SwiperModule } from 'ngx-swiper-wrapper';
 import { TippyModule } from 'ng-tippy';
 import { MatTabsModule } from '@angular/material';
@@ -37,7 +36,6 @@ import { ZenButtonComponent } from './components/zen-button';
     HttpClientModule,
     AppRoutingModule,
     InlineSVGModule.forRoot(),
-    ParticlesModule,
     BrowserAnimationsModule,
     SwiperModule,
     TippyModule,
