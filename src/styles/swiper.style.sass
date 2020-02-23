@@ -1,29 +1,9 @@
 @import '~src/styles/common/index'
 
 // Swiper styles in /app/components/portfolio
-.portfolio
+.works
   .swiper
     overflow: hidden
-
-  swiper > .swiper.s-wrapper .swiper-wrapper .swiper-slide
-    +media($mobile-lg)
-      width: 270px !important
-
-    +media($mobile-sm)
-      width: 260px !important
-
-    +media($mobile-xs)
-      width: auto !important
-
-  swiper > .swiper.s-wrapper
-    +media($mobile-lg)
-      position: relative
-      width: 100%
-      margin: 0 auto
-      padding: 0
-
-    +media($mobile-sm)
-      box-sizing: border-box
 
   .swiper-container
     position: static
@@ -33,12 +13,15 @@
     pointer-events: none
     transition: transform 0.4s ease-in-out
 
+    +media(1100px)
+      max-width: 300px !important
+
   .swiper-slide-next
     transform: scale(1.15)
     box-shadow: 0 0 40px rgba($dark, 0.1)
     z-index: 2
 
-    +media($tablet)
+    +media(1100px)
       transform: scale(1)
 
   .swiper-button-prev,
@@ -53,6 +36,9 @@
     transition: opacity 0.2s, box-shadow 0.2s ease-out
     z-index: 1
 
+    &:after
+      display: none
+
     &:hover
       box-shadow: 0 0 40px rgba($dark, 0.15)
 
@@ -61,7 +47,7 @@
       height: 60px
       background-size: 60px 60px
 
-    +media($mobile-lg)
+    +media($tablet)
       display: none
 
   .swiper-button-prev

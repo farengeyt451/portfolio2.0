@@ -2,21 +2,25 @@
   <div class="nav" #navMenu>
 
     <ul class="nav__menu">
-      <li class="nav__item" [@toggleMenu]=menuState>
-        <a class="nav__link" routerLink="/home" routerLinkActive="nav__link--active">Home</a>
-      </li>
-      <li class="nav__item" [@toggleMenu]=menuState>
-        <a class="nav__link" routerLink="/portfolio" routerLinkActive="nav__link--active">Portfolio</a>
-      </li>
-      <li class="nav__item" [@toggleMenu]=menuState>
-        <a class="nav__link" routerLink="/skills" routerLinkActive="nav__link--active">Skills</a>
-      </li>
-      <li class="nav__item" [@toggleMenu]=menuState>
-        <a class="nav__link" routerLink="/contacts" routerLinkActive="nav__link--active">Contacts</a>
+      <li
+        *ngFor="let item of navMenuItems"
+        class="nav__item"
+        [@toggleMenu]="menuState"
+      >
+        <a
+          class="nav__link"
+          [routerLink]="item.path"
+          routerLinkActive="nav__link--active"
+        >
+          {{ item.title }}
+        </a>
       </li>
     </ul>
 
-    <app-mobile-navigation *ngIf="menuState === 'visible'" (onNavEvent)=onNavEvent()>
+    <app-mobile-navigation
+      *ngIf="menuState === 'visible'"
+      (onMobileNavItemSelect)="onMobileNavItemSelect()"
+    >
     </app-mobile-navigation>
 
     <div class="hamburger nav__toggle" (click)="onMenuClick()" #hamburger>

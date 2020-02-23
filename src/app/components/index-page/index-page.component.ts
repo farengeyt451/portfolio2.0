@@ -2,7 +2,6 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { gradient } from '../../../assets/js/gradient.js';
 import { particle } from '../../../assets/js/particle.js';
-import { ZenService } from '../../services/zen.service';
 
 @Component({
   selector: 'app-index-page',
@@ -14,18 +13,14 @@ export class IndexPageComponent implements OnInit, AfterViewInit {
   zenSubscribtion: Subscription;
   zenState: boolean;
 
-  constructor(private zen: ZenService) {}
+  constructor() {}
 
-  ngOnInit() {
-    this.zenSubscribtion = this.zen.currentZenState.subscribe(zenState => {
-      this.zenState = zenState;
-    });
-  }
+  ngOnInit() {}
 
   ngAfterViewInit() {
     setTimeout(() => {
-      gradient();
-      particle();
+      // gradient();
+      // particle();
     }, 0);
   }
 

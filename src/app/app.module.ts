@@ -1,11 +1,6 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
 import { InlineSVGModule } from 'ng-inline-svg';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SwiperModule } from 'ngx-swiper-wrapper';
-import { TippyModule } from 'ng-tippy';
-import { MatTabsModule } from '@angular/material';
+// import { MatTabsModule } from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IndexPageComponent } from './components/index-page';
@@ -15,9 +10,9 @@ import { PortfolioComponent } from './components/portfolio';
 import { SkillsComponent } from './components/skills';
 import { ContactsComponent } from './components/contacts';
 import { MobileNavigationComponent } from './components/mobile-navigation';
-import { WindowDimensionsService } from './services/window-dimensions.service';
-import { ZenService } from './services/zen.service';
 import { ZenButtonComponent } from './components/zen-button';
+import { CoreModule } from '@modules/core/core.module';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -32,16 +27,14 @@ import { ZenButtonComponent } from './components/zen-button';
     ZenButtonComponent
   ],
   imports: [
-    BrowserModule,
-    HttpClientModule,
+    CommonModule,
+    CoreModule,
     AppRoutingModule,
-    InlineSVGModule.forRoot(),
-    BrowserAnimationsModule,
-    SwiperModule,
-    TippyModule,
-    MatTabsModule
+    InlineSVGModule.forRoot()
+
+    // MatTabsModule
   ],
-  providers: [{ provide: 'windowObject', useValue: window }, WindowDimensionsService, ZenService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

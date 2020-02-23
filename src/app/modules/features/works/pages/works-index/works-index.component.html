@@ -1,0 +1,12 @@
+<div class="works" *ngIf="projects">
+
+  <div class="works__slider">
+
+    <swiper [config]="swiperConfig" >
+
+      <div class="slide" *ngFor="let project of projects">
+        <app-works-slide [slideData]="project"></app-works-slide>
+      </div>
+    </swiper>
+  </div>
+</div>

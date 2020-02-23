@@ -1,0 +1,113 @@
+@import '~src/styles/common'
+
+.works-slide
+  position: relative
+  box-sizing: border-box
+  padding: 60px 40px 80px 40px
+  border: 1px solid #eee
+  border-radius: 5px
+  background-color: $light
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15)
+  font-family: $font-second
+  cursor: default
+
+  &:nth-child(1)
+    animation-delay: 0.25s
+
+  &:nth-child(2)
+    animation-delay: 0.325s
+
+  &:nth-child(3)
+    animation-delay: 0.475s
+
+  +media($laptop-md)
+    padding: 40px 20px 60px 20px
+
+  +media($laptop-sm)
+    padding: 35px 20px 45px 20px
+
+  +media($tablet)
+    padding: 50px
+
+  +media(850px)
+    padding: 50px 25px
+
+  +media($mobile-lg)
+    padding: 50px 45px
+
+  +media($mobile-md)
+    padding: 40px 20px
+
+.works-slide__logo
+  display: block
+  width: 100px
+  height: auto
+  margin: 40px auto
+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+    width: 100%
+
+  +media($laptop-sm)
+    width: 80px
+
+  +media($tablet)
+    width: 65px
+
+.works-slide__name
+  margin: 25px 0
+  min-height: 50px
+  color: $text-main
+  font:
+    size: 24px
+    weight: $font-semi-bold
+  line-height: 1.2
+
+  +media($laptop-sm)
+    margin: 20px 0
+    font-size: 20px
+
+.works-slide__desc
+  height: 80px
+  margin: 0 auto 80px auto
+  color: $text-main
+  font:
+    family: $font-second
+    size: 16px
+  line-height: 1.5
+
+  +media($laptop-sm)
+    margin-bottom: 40px
+    font-size: 14px
+
+  +media($tablet)
+    height: 120px
+
+.works-slide__link
+  color: $dark
+  text-decoration: none
+  font-size: 16px
+  opacity: 0.55
+  pointer-events: all
+
+  &:after
+    content: '→'
+    display: inline-block
+    margin-left: 4px
+    transition: margin 0.4s cubic-bezier(0.55, 0.3, 0.15, 0.9)
+
+  &:hover
+
+    &:after
+      margin-left: 10px
+
+  +media($laptop-sm)
+    font-size: 14px
+
+.works-slide__year
+  position: absolute
+  bottom: 10px
+  left: 50%
+  display: block
+  color: $text-light
+  font-size: 12px
+  transform: translateX(-50%)

@@ -6,13 +6,13 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./mobile-navigation.component.sass']
 })
 export class MobileNavigationComponent implements OnInit {
-  @Output() onNavEvent = new EventEmitter<string>();
+  @Output() onMobileNavItemSelect = new EventEmitter<string>();
 
   constructor() {}
 
   ngOnInit() {}
 
   onMenuItemClick() {
-    this.onNavEvent.emit('hidden');
+    this.onMobileNavItemSelect.emit('hidden');
   }
 }

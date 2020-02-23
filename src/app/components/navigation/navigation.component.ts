@@ -5,12 +5,11 @@ import {
   ViewChild,
   ElementRef,
   Output,
-  EventEmitter,
-  OnDestroy
+  EventEmitter
 } from '@angular/core';
-import { Subscription } from 'rxjs';
-import { WindowDimensionsService } from '../../services/window-dimensions.service';
 import { toggleMenu } from './navigation.animation';
+import { navMenuItems } from '@fixtures/nav-menu.fixtures';
+import { NavMenuItem } from '@interfaces/nav-menu.interfaces';
 
 @Component({
   selector: 'app-navigation',
@@ -18,51 +17,52 @@ import { toggleMenu } from './navigation.animation';
   styleUrls: ['./navigation.component.sass'],
   animations: [toggleMenu]
 })
-export class NavigationComponent implements OnInit, OnDestroy {
-  @ViewChild('navMenu') navMenu: ElementRef;
-  @ViewChild('hamburger') hamburger: ElementRef;
+export class NavigationComponent implements OnInit {
   @Output() onContentStateChange = new EventEmitter<string>();
+  @ViewChild('navMenu', { read: ElementRef, static: true }) navMenu: ElementRef;
+  @ViewChild('hamburger', { read: ElementRef, static: true }) hamburger: ElementRef;
 
-  hamburgerNativeEl: HTMLElement;
+  navMenuItems: NavMenuItem[] = navMenuItems;
   menuState: string = 'hidden';
   contentState: string = 'visible';
-  windowDimsSub$: Subscription;
-  windowWidth: number;
+  mediaMatcher: MediaQueryList;
 
-  constructor(private renderer: Renderer2, private winDim: WindowDimensionsService) {}
+  constructor(private renderer: Renderer2) {}
 
   ngOnInit() {
-    this.hamburgerNativeEl = this.hamburger.nativeElement;
-    this.windowDimsSub$ = this.winDim.windowSizeChanged.subscribe(dims => {
-      this.windowWidth = dims.width;
-      if (this.windowWidth > 639) {
-        this.contentState = 'visible';
-        this.onContentStateChange.emit(this.contentState);
-      } else if (this.menuState === 'visible') {
+    this.initMatcher();
+  }
+
+  initMatcher() {
+    this.mediaMatcher = window.matchMedia('(max-width: 639px)');
+
+    this.mediaMatcher.addListener((queryList: MediaQueryListEvent) => {
+      if (queryList.matches && this.menuState === 'visible') {
         this.contentState = 'hidden';
-        this.onContentStateChange.emit(this.contentState);
+        this.emitContentState();
+      } else {
+        this.contentState = 'visible';
+        this.emitContentState();
       }
     });
   }
 
-  ngOnDestroy() {
-    this.windowDimsSub$.unsubscribe();
-  }
-
-  onNavEvent() {
+  onMobileNavItemSelect() {
     this.onMenuClick();
   }
 
   onMenuClick() {
     this.toggleHamburgerAnimation();
     this.changeNavMenuState();
-    this.windowWidth < 640 && this.changeContentState();
+    this.mediaMatcher.matches && this.changeContentState();
   }
 
   toggleHamburgerAnimation() {
-    this.hamburgerNativeEl.classList.contains('hamburger--active')
-      ? this.renderer.removeClass(this.hamburgerNativeEl, 'hamburger--active')
-      : this.renderer.addClass(this.hamburgerNativeEl, 'hamburger--active');
+    const hamburgerNativeEl: HTMLElement = this.hamburger.nativeElement;
+
+    hamburgerNativeEl.classList.contains('hamburger--active')
+      ? this.renderer.removeClass(hamburgerNativeEl, 'hamburger--active')
+      : this.renderer.addClass(hamburgerNativeEl, 'hamburger--active');
   }
 
   changeNavMenuState() {
@@ -71,6 +71,10 @@ export class NavigationComponent implements OnInit, OnDestroy {
 
   changeContentState() {
     this.contentState = this.contentState === 'hidden' ? 'visible' : 'hidden';
+    this.emitContentState();
+  }
+
+  emitContentState() {
     this.onContentStateChange.emit(this.contentState);
   }
 }
