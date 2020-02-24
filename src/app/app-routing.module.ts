@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './components/home';
-import { PortfolioComponent } from './components/portfolio';
 import { SkillsComponent } from './components/skills';
 import { ContactsComponent } from './components/contacts';
 
@@ -15,6 +13,10 @@ const routes: Routes = [
     path: 'works',
     loadChildren: () =>
       import('@modules/features/works/works.module').then(module => module.WorksModule)
+  },
+  {
+    path: 'contacts',
+    component: ContactsComponent
   },
   {
     path: '**',
@@ -37,10 +39,6 @@ const routes: Routes = [
   //   path: 'skills',
   //   component: SkillsComponent
   // },
-  // {
-  //   path: 'contacts',
-  //   component: ContactsComponent
-  // }
 ];
 
 @NgModule({

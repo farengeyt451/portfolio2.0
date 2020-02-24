@@ -1,7 +1,6 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { Subscription } from 'rxjs';
-import { gradient } from '../../../assets/js/gradient.js';
-import { particle } from '../../../assets/js/particle.js';
+import { Component, OnInit, AfterViewInit, NgZone } from '@angular/core';
+import { gradient } from 'src/assets/js/gradient.js';
+import { particle } from 'src/assets/js/particle.js';
 
 @Component({
   selector: 'app-index-page',
@@ -10,25 +9,19 @@ import { particle } from '../../../assets/js/particle.js';
 })
 export class IndexPageComponent implements OnInit, AfterViewInit {
   contentState: string = 'visible';
-  zenSubscribtion: Subscription;
-  zenState: boolean;
 
-  constructor() {}
+  constructor(public zone: NgZone) {}
 
   ngOnInit() {}
 
   ngAfterViewInit() {
-    setTimeout(() => {
-      // gradient();
-      // particle();
-    }, 0);
+    gradient();
+    particle();
   }
 
   onContentStateChange(contentState: string) {
-    this.contentState = contentState;
-  }
-
-  onCloseZen() {
-    this.zenState = true;
+    this.zone.run(() => {
+      this.contentState = contentState;
+    });
   }
 }

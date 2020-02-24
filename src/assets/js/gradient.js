@@ -1,5 +1,5 @@
 export function gradient() {
-  var mainContainer = document.getElementById('gradient');
+  var mainContainer = document.getElementById('background-animation');
   // rgb vals of the gradients
   var gradients = [
     { start: [22, 126, 213], stop: [142, 45, 226] },

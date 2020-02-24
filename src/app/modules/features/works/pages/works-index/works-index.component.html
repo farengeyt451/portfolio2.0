@@ -1,9 +1,11 @@
-<div class="works" *ngIf="projects">
+<div class="works">
 
   <div class="works__slider">
 
-    <swiper [config]="swiperConfig" >
-
+    <swiper
+      #swiperComponent
+      [config]="swiperConfig"
+    >
       <div class="slide" *ngFor="let project of projects">
         <app-works-slide [slideData]="project"></app-works-slide>
       </div>

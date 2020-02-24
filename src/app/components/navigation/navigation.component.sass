@@ -1,7 +1,7 @@
 @import '~src/styles/common/index'
 @import '~src/styles/animations'
 
-.nav
+.navigation
   display: flex
   justify-content: space-between
   align-items: center
@@ -14,7 +14,7 @@
   +media($mobile-md)
     justify-content: flex-end
 
-.nav__menu
+.navigation__menu
   display: flex
   justify-content: space-between
   align-items: center
@@ -25,13 +25,13 @@
   +media($mobile-md)
     display: none
 
-.nav__toggle--mobile
+.navigation__toggle--mobile
   display: none
 
   +media($mobile-md)
     display: block
 
-.nav__item
+.navigation__item
   opacity: 0
   transition: opacity 0.2s, transform 0.2s
 
@@ -39,7 +39,7 @@
     &:nth-child(#{$i})
       transition-delay: #{$i * 0.1}s
 
-.nav__link
+.navigation__link
   font:
     family: $font-main
     weight: $font-medium
@@ -53,7 +53,7 @@
   &:hover
     color: $third
 
-.nav__link--active
+.navigation__link--active
   color: $third
 
 .hamburger
@@ -77,46 +77,41 @@
   animation: fade-in-right-pos 0.45s ease, show 0.4s ease 0.25s
   animation-fill-mode: forwards
 
-  &:nth-child(1)
-    width: 30px
-    animation-delay: 0.25s
-    transition-delay: 0.25s
-
-  &:nth-child(2)
-    animation-delay: 0.325s
-    transition-delay: 0.325s
-
-  &:nth-child(3)
-    width: 20px
-    animation-delay: 0.475s
-    transition-delay: 0.475s
-
   .hamburger__opened &
     position: absolute
     width: 0px
     top: 10px
     right: 0
 
-    &:nth-child(1)
-      transform: rotate(45deg)
-      transition-delay: 0s
-
-    &:nth-child(2)
-      transform: rotate(-45deg)
-      transition-delay: 0.25s
-
-    .hamburger--active &
-
-      &:nth-child(1)
-        width: 40px
-        transition-delay: 1s
-
-      &:nth-child(2)
-        width: 40px
-        transition-delay: 1.25s
-
   .hamburger--active &
     width: 0
 
-  +media($tablet)
-    height: 2px
+.hamburger__line--top
+  width: 30px
+  animation-delay: 0.25s
+  transition-delay: 0.25s
+
+  .hamburger__opened &
+    transform: rotate(45deg)
+    transition-delay: 0s
+
+    .hamburger--active &
+      width: 40px
+      transition-delay: 1s
+
+.hamburger__line--middle
+  animation-delay: 0.325s
+  transition-delay: 0.325s
+
+.hamburger__line--bottom
+  width: 20px
+  animation-delay: 0.475s
+  transition-delay: 0.475s
+
+  .hamburger__opened &
+    transform: rotate(-45deg)
+    transition-delay: 0.25s
+
+    .hamburger--active &
+      width: 40px
+      transition-delay: 1.25s

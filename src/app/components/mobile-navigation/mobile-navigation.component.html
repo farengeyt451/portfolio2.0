@@ -1,16 +1,12 @@
 <div class="mob">
   <ul class="mob__menu">
-    <li class="mob__item">
-      <a class="mob__link" routerLink="/home" (click)="onMenuItemClick()">Home</a>
-    </li>
-    <li class="mob__item">
-      <a class="mob__link" routerLink="/portfolio" (click)="onMenuItemClick()">Portfolio</a>
-    </li>
-    <li class="mob__item">
-      <a class="mob__link" routerLink="/skills" (click)="onMenuItemClick()">Skills</a>
-    </li>
-    <li class="mob__item">
-      <a class="mob__link" routerLink="/contacts" (click)="onMenuItemClick()">Contacts</a>
-    </li>
+    <li class="mob__item" *ngFor="let menuItem of navMenuItems">
+      <a
+        class="mob__link"
+        [routerLink]="menuItem.path"
+        (click)="onMenuItemClick()"
+      >
+        {{ menuItem.title }}
+    </a>
   </ul>
 </div>

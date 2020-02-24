@@ -1,16 +1,16 @@
 <nav>
-  <div class="nav" #navMenu>
+  <div class="navigation" #navMenu>
 
-    <ul class="nav__menu">
+    <ul class="navigation__menu">
       <li
         *ngFor="let item of navMenuItems"
-        class="nav__item"
+        class="navigation__item"
         [@toggleMenu]="menuState"
       >
         <a
-          class="nav__link"
+          class="navigation__link"
           [routerLink]="item.path"
-          routerLinkActive="nav__link--active"
+          routerLinkActive="navigation__link--active"
         >
           {{ item.title }}
         </a>
@@ -19,21 +19,22 @@
 
     <app-mobile-navigation
       *ngIf="menuState === 'visible'"
+      [navMenuItems]="navMenuItems"
       (onMobileNavItemSelect)="onMobileNavItemSelect()"
     >
     </app-mobile-navigation>
 
-    <div class="hamburger nav__toggle" (click)="onMenuClick()" #hamburger>
+    <div class="hamburger navigation__toggle" (click)="onMenuClick()" #hamburger>
 
       <div class="hamburger__default">
-        <span class="hamburger__line"></span>
-        <span class="hamburger__line"></span>
-        <span class="hamburger__line"></span>
+        <span class="hamburger__line hamburger__line--top"></span>
+        <span class="hamburger__line hamburger__line--middle"></span>
+        <span class="hamburger__line hamburger__line--bottom"></span>
       </div>
 
       <div class="hamburger__opened">
-        <span class="hamburger__line"></span>
-        <span class="hamburger__line"></span>
+        <span class="hamburger__line hamburger__line--top"></span>
+        <span class="hamburger__line hamburger__line--bottom"></span>
       </div>
     </div>
   </div>

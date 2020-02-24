@@ -6,7 +6,7 @@ export const navMenuItems = [
   },
   {
     id: 1,
-    title: 'Portfolio',
+    title: 'Works',
     path: '/works'
   },
   {

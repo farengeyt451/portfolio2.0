@@ -1,4 +1,5 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { NavMenuItem } from '@interfaces/nav-menu.interfaces';
 
 @Component({
   selector: 'app-mobile-navigation',
@@ -6,6 +7,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./mobile-navigation.component.sass']
 })
 export class MobileNavigationComponent implements OnInit {
+  @Input() navMenuItems: NavMenuItem[];
   @Output() onMobileNavItemSelect = new EventEmitter<string>();
 
   constructor() {}

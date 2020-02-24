@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ProjectData } from '@interfaces/portfolio.interfaces';
+import { ProjectData } from '@interfaces/projects.interfaces';
 
 @Component({
   selector: 'app-works-slide',

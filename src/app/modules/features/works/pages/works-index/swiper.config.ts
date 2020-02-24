@@ -6,10 +6,15 @@ export const swiperConfig: SwiperConfigInterface = {
   navigation: true,
   keyboard: true,
   slideToClickedSlide: false,
-  grabCursor: true,
   preventInteractionOnTransition: true,
   observer: true,
   simulateTouch: false,
+  preloadImages: false,
+  lazy: {
+    loadPrevNext: true,
+    loadPrevNextAmount: 2,
+    loadOnTransitionStart: true
+  },
   breakpoints: {
     1100: {
       slidesPerView: 3,
@@ -25,8 +30,11 @@ export const swiperConfig: SwiperConfigInterface = {
       spaceBetween: 35,
       speed: 200
     },
+    640: {
+      slidesPerView: 2
+    },
     560: {
-      slidesPerView: 2,
+      slidesPerView: 1.6,
       spaceBetween: 30
     },
     410: {

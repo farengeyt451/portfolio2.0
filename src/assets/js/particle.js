@@ -1,7 +1,7 @@
 export function particle() {
   var ParticleNetworkAnimation, PNA;
   var pna;
-  var main = document.getElementById('gradient');
+  var main = document.getElementById('background-animation');
   var that;
 
   // main.addEventListener('contextmenu', event => event.preventDefault());
