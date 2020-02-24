@@ -75,8 +75,6 @@ export class NavigationComponent implements OnInit {
   }
 
   emitContentState() {
-    console.log(this.contentState);
-
     this.onContentStateChange.emit(this.contentState);
   }
 }

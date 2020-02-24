@@ -15,7 +15,7 @@ export class WorksIndexComponent implements OnInit, AfterViewInit {
   swiperRef: SwiperComponent;
   projects: ProjectData[] = projects;
   swiperConfig = swiperConfig;
-  worksTitle: string = 'Projects';
+  worksTitle: string = 'Works';
 
   constructor(private titleService: Title) {}
 

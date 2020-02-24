@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SkillsComponent } from './components/skills';
-import { ContactsComponent } from './components/contacts';
 
 const routes: Routes = [
   {
@@ -15,8 +13,9 @@ const routes: Routes = [
       import('@modules/features/works/works.module').then(module => module.WorksModule)
   },
   {
-    path: 'contacts',
-    component: ContactsComponent
+    path: 'skills',
+    loadChildren: () =>
+      import('@modules/features/skills/skills.module').then(module => module.SkillsModule)
   },
   {
     path: '**',

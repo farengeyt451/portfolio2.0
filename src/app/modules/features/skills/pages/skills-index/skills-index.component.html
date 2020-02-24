@@ -1,0 +1,40 @@
+<div class="skills">
+
+  <mat-tab-group
+    mat-align-tabs="center"
+    disableRipple
+    animationDuration="700"
+    [selectedIndex]="selectedTab"
+  >
+
+    <ng-container *ngFor="let skill of skills | keyvalue: originalOrder; let i = index">
+
+     <mat-tab>
+
+        <ng-template mat-tab-label>
+            <span class="skill__tab" (click)="onTabSelect(i)">
+              {{ skill.key }}
+            </span>
+        </ng-template>
+
+        <ng-template matTabContent>
+          <div class="skill__content">
+            <div
+              *ngFor="let item of skill.value.items"
+              class="skills__item"
+              [attr.data-tippy-content]="item.title"
+              ngxTippy
+              [tippyProps]="tippyProps"
+            >
+              <img
+                class="skills__img"
+                [src]="[item.logo]"
+                [alt]="item.title"
+              >
+            </div>
+          </div>
+        </ng-template>
+      </mat-tab>
+    </ng-container>
+  </mat-tab-group>
+</div>
