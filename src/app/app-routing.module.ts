@@ -3,6 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  {
     path: 'home',
     loadChildren: () =>
       import('@modules/features/home/home.module').then(module => module.HomeModule)
@@ -26,23 +31,6 @@ const routes: Routes = [
     path: '**',
     redirectTo: 'home'
   }
-  // {
-  //   path: '',
-  //   redirectTo: '/home',
-  //   pathMatch: 'full'
-  // },
-  // {
-  //   path: 'home',
-  //   component: HomeComponent
-  // },
-  // {
-  //   path: 'portfolio',
-  //   component: PortfolioComponent
-  // },
-  // {
-  //   path: 'skills',
-  //   component: SkillsComponent
-  // },
 ];
 
 @NgModule({
