@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ComponentRef, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { SwiperComponent } from 'ngx-swiper-wrapper';
 import { swiperConfig } from './swiper.config';
@@ -13,7 +13,7 @@ import { ProjectData } from '@interfaces/projects.interfaces';
 export class WorksIndexComponent implements OnInit, AfterViewInit {
   @ViewChild('swiperComponent', { read: SwiperComponent, static: false })
   swiperRef: SwiperComponent;
-  projects: ProjectData[] = projects;
+  projects: ProjectData[];
   swiperConfig = swiperConfig;
   worksTitle: string = 'Works';
 
@@ -21,10 +21,15 @@ export class WorksIndexComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.titleService.setTitle(this.worksTitle);
+    this.sortProjectsByYear();
   }
 
   ngAfterViewInit() {
-    this.initLazyLoadOnSwiper();
+    this.projects && this.initLazyLoadOnSwiper();
+  }
+
+  sortProjectsByYear() {
+    this.projects = projects.sort((a, b) => b.year - a.year);
   }
 
   initLazyLoadOnSwiper() {

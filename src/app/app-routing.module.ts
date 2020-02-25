@@ -18,6 +18,11 @@ const routes: Routes = [
       import('@modules/features/skills/skills.module').then(module => module.SkillsModule)
   },
   {
+    path: 'contacts',
+    loadChildren: () =>
+      import('@modules/features/contacts/contacts.module').then(module => module.ContactsModule)
+  },
+  {
     path: '**',
     redirectTo: 'home'
   }

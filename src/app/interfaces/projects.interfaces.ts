@@ -4,5 +4,5 @@ export interface ProjectData {
   tags: String[];
   logo: string;
   link: string;
-  year: string;
+  year: number;
 }

@@ -7,7 +7,7 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./home-index.component.sass']
 })
 export class HomeIndexComponent implements OnInit {
-  mainTitle: string = 'Portfolio - Alexander Kislov';
+  mainTitle: string = 'Portfolio — Alexander Kislov';
 
   constructor(private titleService: Title) {}
 

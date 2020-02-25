@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+
+// Modules
 import { CoreModule } from '@modules/core/core.module';
-// import { InlineSVGModule } from 'ng-inline-svg';
+
+// Components
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [AppComponent],

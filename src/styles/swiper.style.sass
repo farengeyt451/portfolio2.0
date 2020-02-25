@@ -1,6 +1,6 @@
 @import '~src/styles/common/index'
 
-// Swiper styles in /app/components/portfolio
+// Swiper styles in /app/modules/features/works/components/works-slide
 .works
   .swiper
     overflow: hidden
@@ -29,15 +29,15 @@
 
   .swiper-button-prev,
   .swiper-button-next
+    z-index: 1
+    margin-top: -40px
     width: 80px
     height: 80px
-    margin-top: -40px
+    border-radius: 100%
     background-image: url('/assets/blocks/slider/arrow.png')
     background-size: 80px 80px
     box-shadow: 0 0 40px rgba($dark, 0.05)
-    border-radius: 100%
     transition: opacity 0.2s, box-shadow 0.2s ease-out
-    z-index: 1
 
     &:after
       display: none

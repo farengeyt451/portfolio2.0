@@ -1,0 +1,14 @@
+<div class="contacts-item">
+  <a
+    class="contacts-item__icon"
+    target="_blank"
+    [href]="contactData.target"
+    [inlineSVG]="contactData.icon"
+    [ngClass]="customClass"
+  >
+  </a>
+
+  <div class="contacts-item__body">
+    <div class="contacts-item__source">{{ contactData.source }}</div>
+  </div>
+</div>

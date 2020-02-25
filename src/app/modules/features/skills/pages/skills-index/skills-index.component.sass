@@ -46,20 +46,20 @@
   position: relative
   display: inline-flex
   align-items: center
-  width: 60px
-  height: 60px
   margin: 30px 15px
   padding: 30px
-  background-color: rgba($light, 1)
+  width: 60px
+  height: 60px
   border-radius: 50%
+  background-color: rgba($light, 1)
 
   +media($laptop-sm)
-    height: 50px
     width: 50px
+    height: 50px
 
   +media($mobile-lg)
-    height: 40px
     width: 40px
+    height: 40px
 
 .skills__img
   width: 100%
@@ -69,11 +69,11 @@
 +media-min(1024px)
   \:host
     >.container
-      max-width: 1264px
-      width: 100%
-      margin: 0 auto
       display: flex
       justify-content: space-between
+      margin: 0 auto
+      max-width: 1264px
+      width: 100%
       background: none
 
     ::ng-deep

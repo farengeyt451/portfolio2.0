@@ -1,6 +1,6 @@
 @import '~src/styles/common/index'
 
-// Mat-tab styles in /app/components/skills
+// Mat-tab styles in /app/modules/features/skills/pages/skills-index
 .skills
   .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar
     background-color: transparent
@@ -14,11 +14,11 @@
       padding: 0 20px
 
   .mat-tab-label
-    color: $light
+    margin-bottom: 15px
     justify-content: flex-start
     padding-right: 50px
+    color: $light
     transition: opacity 0.15s cubic-bezier(0.7, 0, 0.3, 1), color 0.25s
-    margin-bottom: 15px
 
     &:last-child
       margin-bottom: 0
@@ -38,8 +38,8 @@
     border-color: rgba($light, 0.5)
 
   .mat-tab-header-pagination-chevron
-    height: 12px
     width: 12px
+    height: 12px
     border-color: rgba($light, 1)
 
   .mat-elevation-z4

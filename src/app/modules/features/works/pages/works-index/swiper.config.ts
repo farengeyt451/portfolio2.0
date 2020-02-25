@@ -6,7 +6,6 @@ export const swiperConfig: SwiperConfigInterface = {
   navigation: true,
   keyboard: true,
   slideToClickedSlide: false,
-  preventInteractionOnTransition: true,
   observer: true,
   simulateTouch: false,
   preloadImages: false,

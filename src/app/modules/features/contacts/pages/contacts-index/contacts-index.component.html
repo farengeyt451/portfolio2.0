@@ -1,11 +1,22 @@
+
 <div class="contacts">
 
-  <div class="contacts__item">
-    <a class="contacts__icon contacts__icon--email"
-       href="mailto:alexander-kislov@hotmail.com"
-       target="_blank"
-       [inlineSVG]="'/assets/blocks/contacts/email.svg'">
-      </a>
+  <div
+    *ngFor="let contact of contacts"
+    class="contacts__item"
+  >
+    <app-contacts-item [contactData]="contact"></app-contacts-item>
+  </div>
+
+  <!-- <div class="contacts__item">
+    <a
+      class="contacts__icon contacts__icon--email"
+      href="mailto:alexander-kislov@hotmail.com"
+      target="_blank"
+      [inlineSVG]="'/assets/blocks/contacts/email.svg'"
+    >
+    </a>
+
     <div class="contacts__body">
       <div class="contacts__source">alexander-kislov@hotmail.com</div>
     </div>
@@ -42,5 +53,5 @@
     <div class="contacts__body">
       <div class="contacts__source">in/alexander-kislov</div>
     </div>
-  </div>
+  </div> -->
 </div>

@@ -6,7 +6,7 @@ import { Title } from '@angular/platform-browser';
   templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
-  mainTitle: string = 'Portfolio - Alexander Kislov';
+  mainTitle: string = 'Portfolio — Alexander Kislov';
 
   constructor(private titleService: Title) {}
 

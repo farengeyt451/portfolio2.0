@@ -11,7 +11,9 @@ import { KeyValue } from '@angular/common';
   styleUrls: ['./skills-index.component.sass']
 })
 export class SkillsIndexComponent implements OnInit {
+  skillsTitle: string = 'Skills';
   skills: SkillsData = skills;
+  selectedTab: number = 0;
 
   tippyProps: NgxTippyProps = {
     placement: 'top',
@@ -21,8 +23,6 @@ export class SkillsIndexComponent implements OnInit {
     theme: 'light skill',
     delay: [250, 250]
   };
-  skillsTitle: string = 'Skills';
-  selectedTab = 0;
 
   constructor(private titleService: Title) {}
 
