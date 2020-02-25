@@ -1,15 +1,28 @@
 <div class="works-slide">
+
   <div class="works-slide__wrapper">
+
     <div class="works-slide__holder">
       <img
         class="works-slide__logo swiper-lazy"
         [attr.data-src]="slideData.logo"
+        [alt]="slideData.name"
       >
       <div class="swiper-lazy-preloader"></div>
     </div>
+
     <h2 class="works-slide__name">{{ slideData.name }}</h2>
+
     <div class="works-slide__desc">{{ slideData.description }}</div>
-    <a class="works-slide__link" [href]="slideData.link" target="_blank">View project</a>
+
+    <a
+      class="works-slide__link"
+      [href]="slideData.link"
+      target="_blank"
+      rel="noopener"
+    >
+      View project
+    </a>
     <span class="works-slide__year">{{ slideData.year }}</span>
   </div>
 </div>

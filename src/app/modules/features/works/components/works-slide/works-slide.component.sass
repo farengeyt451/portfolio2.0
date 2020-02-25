@@ -47,9 +47,13 @@
   width: 100px
   height: auto
   margin: 40px auto
+  transition: opacity 0.2s ease
 
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
-    width: 100%
+  &.swiper-lazy
+    opacity: 0
+
+  &.swiper-lazy-loaded
+    opacity: 1
 
   +media($laptop-sm)
     width: 80px
