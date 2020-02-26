@@ -28,6 +28,7 @@
     "ngx-swiper-wrapper": "^9.0.0",
     "ngx-tippy-wrapper": "^1.0.1",
     "normalize.css": "^8.0.1",
+    "overlayscrollbars": "^1.10.3",
     "rxjs": "~6.5.4",
     "tslib": "^1.11.0",
     "zone.js": "~0.10.2"

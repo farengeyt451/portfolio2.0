@@ -30,6 +30,7 @@
               "./node_modules/tippy.js/dist/tippy.css",
               "./node_modules/tippy.js/themes/light.css",
               "./node_modules/tippy.js/animations/shift-toward.css",
+              "./node_modules/overlayscrollbars/css/OverlayScrollbars.css",
               "src/styles.sass"
             ],
             "scripts": [],
