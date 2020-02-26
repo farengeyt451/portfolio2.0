@@ -20,7 +20,7 @@ OverlayScrollbars(document.body, {
     initialize: false
   },
   scrollbars: {
-    autoHide: 'move',
+    autoHide: 'scroll',
     autoHideDelay: 400
   }
 });
