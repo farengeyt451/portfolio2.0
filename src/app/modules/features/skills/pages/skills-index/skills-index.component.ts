@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { NgxTippyProps } from 'ngx-tippy-wrapper';
-import { skills } from '@fixtures/skills.fixtures';
 import { SkillsData, SkillItem } from '@interfaces/skills.interfaces';
 import { KeyValue } from '@angular/common';
+import { DataService } from '@modules/core/services/data.service';
 
 @Component({
   selector: 'app-skills-index',
@@ -12,7 +12,7 @@ import { KeyValue } from '@angular/common';
 })
 export class SkillsIndexComponent implements OnInit {
   skillsTitle: string = 'Skills';
-  skills: SkillsData = skills;
+  skills: SkillsData;
   selectedTab: number = 0;
 
   tippyProps: NgxTippyProps = {
@@ -24,10 +24,22 @@ export class SkillsIndexComponent implements OnInit {
     delay: [250, 250]
   };
 
-  constructor(private titleService: Title) {}
+  constructor(private titleService: Title, private dataService: DataService) {}
 
   ngOnInit() {
     this.titleService.setTitle(this.skillsTitle);
+    this.getItems();
+  }
+
+  getItems() {
+    this.dataService.getData('skills').subscribe(
+      (data: { skills: SkillsData }) => {
+        this.skills = data.skills;
+      },
+      error => {
+        console.error(error);
+      }
+    );
   }
 
   originalOrder = (

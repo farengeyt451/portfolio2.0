@@ -1,15 +1,7 @@
-import {
-  Component,
-  OnInit,
-  Renderer2,
-  ViewChild,
-  ElementRef,
-  Output,
-  EventEmitter
-} from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { toggleMenu } from './navigation.animation';
-import { navMenuItems } from '@fixtures/nav-menu.fixtures';
 import { NavMenuItem } from '@interfaces/nav-menu.interfaces';
+import { DataService } from '@modules/core/services/data.service';
 
 @Component({
   selector: 'app-navigation',
@@ -19,18 +11,29 @@ import { NavMenuItem } from '@interfaces/nav-menu.interfaces';
 })
 export class NavigationComponent implements OnInit {
   @Output() onContentStateChange = new EventEmitter<string>();
-  @ViewChild('navMenu', { read: ElementRef, static: true }) navMenu: ElementRef;
-  @ViewChild('hamburger', { read: ElementRef, static: true }) hamburger: ElementRef;
 
-  navMenuItems: NavMenuItem[] = navMenuItems;
+  isHamburgerActive: boolean;
+  navMenuItems: NavMenuItem[];
   menuState: string = 'hidden';
   contentState: string = 'visible';
   mediaMatcher: MediaQueryList;
 
-  constructor(private renderer: Renderer2) {}
+  constructor(private dataService: DataService) {}
 
   ngOnInit() {
     this.initMatcher();
+    this.getItems();
+  }
+
+  getItems() {
+    this.dataService.getData('nav-menu').subscribe(
+      (data: { navMenuItems: NavMenuItem[] }) => {
+        this.navMenuItems = data.navMenuItems;
+      },
+      error => {
+        console.error(error);
+      }
+    );
   }
 
   initMatcher() {
@@ -58,11 +61,7 @@ export class NavigationComponent implements OnInit {
   }
 
   toggleHamburgerAnimation() {
-    const hamburgerNativeEl: HTMLElement = this.hamburger.nativeElement;
-
-    hamburgerNativeEl.classList.contains('hamburger--active')
-      ? this.renderer.removeClass(hamburgerNativeEl, 'hamburger--active')
-      : this.renderer.addClass(hamburgerNativeEl, 'hamburger--active');
+    this.isHamburgerActive = !this.isHamburgerActive;
   }
 
   changeNavMenuState() {

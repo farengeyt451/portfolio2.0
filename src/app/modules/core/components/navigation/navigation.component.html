@@ -1,5 +1,6 @@
-<nav>
-  <div class="navigation" #navMenu>
+<nav *ngIf="navMenuItems">
+
+  <div class="navigation">
 
     <ul class="navigation__menu">
       <li
@@ -24,8 +25,11 @@
     >
     </app-mobile-navigation>
 
-    <div class="hamburger navigation__toggle" (click)="onMenuClick()" #hamburger>
-
+    <div
+      class="hamburger navigation__toggle"
+      [ngClass]="{ 'hamburger--active': isHamburgerActive }"
+      (click)="onMenuClick()"
+    >
       <div class="hamburger__default">
         <span class="hamburger__line hamburger__line--top"></span>
         <span class="hamburger__line hamburger__line--middle"></span>

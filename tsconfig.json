@@ -16,7 +16,6 @@
     "paths": {
       "@app/*": ["src/app/*"],
       "@interfaces/*": ["src/app/interfaces/*"],
-      "@fixtures/*": ["src/app/fixtures/*"],
       "@modules/*": ["src/app/modules/*"],
       "@env/*": ["src/environments/*"]
     },

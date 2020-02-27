@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { contacts } from '@fixtures/contacts.fixtures';
 import { Contact } from '@interfaces/contacts.interfaces';
+import { DataService } from '@modules/core/services/data.service';
 
 @Component({
   selector: 'app-contacts-index',
@@ -10,11 +10,23 @@ import { Contact } from '@interfaces/contacts.interfaces';
 })
 export class ContactsIndexComponent implements OnInit {
   contactsTitle: string = 'Contacts';
-  contacts: Contact[] = contacts;
+  contacts: Contact[];
 
-  constructor(private titleService: Title) {}
+  constructor(private titleService: Title, private dataService: DataService) {}
 
   ngOnInit() {
     this.titleService.setTitle(this.contactsTitle);
+    this.getItems();
+  }
+
+  getItems() {
+    this.dataService.getData('contacts').subscribe(
+      (data: { contacts: Contact[] }) => {
+        this.contacts = data.contacts;
+      },
+      error => {
+        console.error(error);
+      }
+    );
   }
 }

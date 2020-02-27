@@ -15,10 +15,13 @@ import { MobileNavigationComponent } from './components/mobile-navigation';
 // Pages
 import { MainPageComponent } from './pages/main-page';
 
+// Service
+import { DataService } from './services/data.service';
+
 @NgModule({
   declarations: [MainPageComponent, NavigationComponent, MobileNavigationComponent],
   imports: [CommonModule, BrowserModule, RouterModule, BrowserAnimationsModule, HttpClientModule],
-  providers: [],
+  providers: [DataService],
   exports: [MainPageComponent]
 })
 export class CoreModule {

@@ -1,0 +1,132 @@
+{
+  "skills": {
+    "HTML": {
+      "items": [
+        {
+          "title": "HTML5",
+          "logo": "/assets/blocks/skills/html5.svg"
+        },
+        {
+          "title": "Pug",
+          "logo": "/assets/blocks/skills/pug.svg"
+        }
+      ]
+    },
+    "CSS": {
+      "items": [
+        {
+          "title": "CSS3",
+          "logo": "/assets/blocks/skills/css3.svg"
+        },
+        {
+          "title": "Sass",
+          "logo": "/assets/blocks/skills/sass.svg"
+        },
+        {
+          "title": "Stylus",
+          "logo": "/assets/blocks/skills/stylus.svg"
+        },
+        {
+          "title": "Bootstrap",
+          "logo": "/assets/blocks/skills/bootstrap.svg"
+        }
+      ]
+    },
+    "JavaScript": {
+      "items": [
+        {
+          "title": "JS (ES features)",
+          "logo": "/assets/blocks/skills/js.svg"
+        },
+        {
+          "title": "Angular",
+          "logo": "/assets/blocks/skills/angular.svg"
+        },
+        {
+          "title": "RxJS",
+          "logo": "/assets/blocks/skills/rxjs.svg"
+        },
+        {
+          "title": "TypeScript",
+          "logo": "/assets/blocks/skills/ts.svg"
+        },
+        {
+          "title": "jQuery",
+          "logo": "/assets/blocks/skills/jquery.svg"
+        }
+      ]
+    },
+    "Build Tools": {
+      "items": [
+        {
+          "title": "Webpack",
+          "logo": "/assets/blocks/skills/webpack.svg"
+        },
+        {
+          "title": "Gulp",
+          "logo": "/assets/blocks/skills/gulp.svg"
+        }
+      ]
+    },
+    "Package Managers": {
+      "items": [
+        {
+          "title": "NPM",
+          "logo": "/assets/blocks/skills/npm.svg"
+        },
+        {
+          "title": "Yarn",
+          "logo": "/assets/blocks/skills/yarn.svg"
+        }
+      ]
+    },
+    "VSC & Hubs": {
+      "items": [
+        {
+          "title": "Git",
+          "logo": "/assets/blocks/skills/git.svg"
+        },
+        {
+          "title": "GitHub",
+          "logo": "/assets/blocks/skills/github.svg"
+        },
+        {
+          "title": "GitLab",
+          "logo": "/assets/blocks/skills/gitlab.svg"
+        }
+      ]
+    },
+    "OS & Apps": {
+      "items": [
+        {
+          "title": "Linux",
+          "logo": "/assets/blocks/skills/linux.svg"
+        },
+        {
+          "title": "Visual Studio Code",
+          "logo": "/assets/blocks/skills/vsc.svg"
+        },
+        {
+          "title": "Adobe Photoshop",
+          "logo": "/assets/blocks/skills/ps.svg"
+        },
+        {
+          "title": "Inkscape",
+          "logo": "/assets/blocks/skills/inkscape.svg"
+        },
+        {
+          "title": "Avocode",
+          "logo": "/assets/blocks/skills/avocode.svg"
+        },
+        {
+          "title": "Zeplin",
+          "logo": "/assets/blocks/skills/zeplin.svg"
+        },
+        {
+          "title": "Figma",
+          "logo": "/assets/blocks/skills/figma.svg"
+        }
+      ]
+    }
+  }
+}

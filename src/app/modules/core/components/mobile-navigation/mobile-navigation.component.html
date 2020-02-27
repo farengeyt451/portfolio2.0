@@ -1,6 +1,9 @@
 <div class="mob">
   <ul class="mob__menu">
-    <li class="mob__item" *ngFor="let menuItem of navMenuItems">
+    <li
+      *ngFor="let menuItem of navMenuItems"
+      class="mob__item"
+    >
       <a
         class="mob__link"
         [routerLink]="menuItem.path"

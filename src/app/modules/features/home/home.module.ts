@@ -10,7 +10,6 @@ import { HomeIndexComponent } from './pages/home-index';
 @NgModule({
   imports: [CommonModule, HomeRoutingModule],
   exports: [],
-  declarations: [HomeIndexComponent],
-  providers: []
+  declarations: [HomeIndexComponent]
 })
 export class HomeModule {}

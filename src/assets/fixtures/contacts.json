@@ -1,0 +1,32 @@
+{
+  "contacts": [
+    {
+      "name": "email",
+      "target": "mailto:alexander-kislov@hotmail.com",
+      "icon": "/assets/blocks/contacts/email.svg",
+      "source": "alexander-kislov@hotmail.com",
+      "brandColor": "#009dc4"
+    },
+    {
+      "name": "skype",
+      "target": "skype:live:alexander-kislov?call",
+      "icon": "/assets/blocks/contacts/skype.svg",
+      "source": "live:alexander-kislov",
+      "brandColor": "#00aff0"
+    },
+    {
+      "name": "github",
+      "target": "https://github.com/farengeyt451",
+      "icon": "/assets/blocks/contacts/github.svg",
+      "source": "farengeyt451",
+      "brandColor": "#1e4a68"
+    },
+    {
+      "name": "linkedin",
+      "target": "https://www.linkedin.com/in/alexander-kislov",
+      "icon": "/assets/blocks/contacts/linkedin.svg",
+      "source": "in/alexander-kislov",
+      "brandColor": "#0077B5"
+    }
+  ]
+}

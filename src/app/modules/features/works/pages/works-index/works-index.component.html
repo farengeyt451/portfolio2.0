@@ -1,10 +1,13 @@
-<div class="works" *ngIf="projects">
-
+<div
+  *ngIf="projects"
+  class="works"
+>
   <div class="works__slider">
 
     <swiper
       #swiperComponent
       [config]="swiperConfig"
+      (init)="onSwiperInit()"
     >
       <div class="slide" *ngFor="let project of projects">
         <app-works-slide [slideData]="project"></app-works-slide>
