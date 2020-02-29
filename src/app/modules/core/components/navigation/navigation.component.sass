@@ -74,8 +74,6 @@
   background-color: $light
   transition: 0.25s ease-in-out
   opacity: 0
-  animation: fade-in-right-pos 0.45s ease, show 0.4s ease 0.25s
-  animation-fill-mode: forwards
 
   .hamburger__opened &
     position: absolute
@@ -88,7 +86,6 @@
 
 .hamburger__line--top
   width: 30px
-  animation-delay: 0.25s
   transition-delay: 0.25s
 
   .hamburger__opened &
@@ -100,12 +97,10 @@
       transition-delay: 1s
 
 .hamburger__line--middle
-  animation-delay: 0.325s
   transition-delay: 0.325s
 
 .hamburger__line--bottom
   width: 20px
-  animation-delay: 0.475s
   transition-delay: 0.475s
 
   .hamburger__opened &
@@ -115,3 +110,16 @@
     .hamburger--active &
       width: 40px
       transition-delay: 1.25s
+
+::ng-deep
+  .wf-active .hamburger__line
+    animation: fade-in-right-pos 0.45s ease 0.2s forwards, show 0.4s ease 0.45s forwards
+
+  .wf-active .hamburger__line--top
+    animation-delay: 0.45s
+
+  .wf-active .hamburger__line--middle
+    animation-delay: 0.525s
+
+  .wf-active .hamburger__line--bottom
+    animation-delay: 0.675s

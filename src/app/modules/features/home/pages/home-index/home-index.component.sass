@@ -17,6 +17,10 @@
     display: inline-block
     transform: translateX(-50%)
 
+.home__name
+  display: block
+  font-weight: $font-semi-bold
+
 .home__caption
   margin: 0
   font:
@@ -25,8 +29,6 @@
   line-height: 1.4
   cursor: default
   opacity: 0
-  animation: fade-in-right 0.75s ease, show 0.4s ease 0.25s
-  animation-fill-mode: forwards
 
   +media($laptop-lg)
     font-size: 60px
@@ -37,10 +39,6 @@
   +media($mobile-sm)
     font-size: 44px
 
-.home__name
-  display: block
-  font-weight: $font-semi-bold
-
 .home__greeting
   margin: 25px 0 0 0
   font:
@@ -49,9 +47,6 @@
     weight: $font-light
   opacity: 0
   cursor: default
-  animation: fade-in-right 0.75s ease, show 0.4s ease 0.25s
-  animation-delay: 0.2s
-  animation-fill-mode: forwards
 
   +media($laptop-lg)
     font-size: 28px
@@ -79,12 +74,6 @@
   cursor: pointer
   transition: transform 0.3s, background-color 0.2s, text-shadow 0.3s
   transform: translateY(0)
-  animation:
-    name: show
-    duration: 0.3s
-    timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86)
-    delay: 0.75s
-    fill-mode: forwards
 
   &:hover
     text-shadow: 0 0 0.65px #fff, 0 0 0.65px #fff
@@ -99,3 +88,13 @@
 
   +media($mobile-sm)
     padding: 17px 50px
+
+::ng-deep
+  .wf-active .home__caption
+    animation: fade-in-right 0.75s ease 0.2s, show 0.4s ease 0.45s forwards
+
+  .wf-active .home__greeting
+    animation: fade-in-right 0.75s ease 0.4s, show 0.4s ease 0.45s forwards
+
+  .wf-active .home__more
+    animation: show 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.95s forwards

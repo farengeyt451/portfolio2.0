@@ -8,8 +8,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build-gh": "ng build --prod --base-href https://alexander-kislov.github.io/",
-    "serve": "static-server"
+    "build-href": "ng build --prod --base-href https://alexander-kislov.github.io/",
+    "serve": "static-server",
+    "deploy-gh": "rm -rf dist && npm run build --prod && cd dist/portfolio2.0 && git init && git remote add origin git@github.com:alexander-kislov/alexander-kislov.github.io.git && git add . && git ci -m 'portfolio 2.0' &&  gp -u origin master -f"
   },
   "private": true,
   "dependencies": {
@@ -31,6 +32,7 @@
     "overlayscrollbars": "^1.10.3",
     "rxjs": "~6.5.4",
     "tslib": "^1.11.0",
+    "webfontloader": "^1.6.28",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
