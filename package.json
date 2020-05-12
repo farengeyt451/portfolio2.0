@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "build-href": "ng build --prod --base-href https://alexander-kislov.github.io/",
     "serve": "static-server",
-    "deploy-gh": "rm -rf dist && npm run build --prod && cd dist/portfolio2.0 && git init && git remote add origin git@github.com:alexander-kislov/alexander-kislov.github.io.git && git add . && git ci -m 'portfolio 2.0' &&  gp -u origin master -f"
+    "deploy-gh": "rm -rf dist && ng build --prod && cd dist/portfolio2.0 && git init && git remote add origin git@github.com:alexander-kislov/alexander-kislov.github.io.git && git add . && git ci -m 'portfolio 2.0' &&  git push origin master -f"
   },
   "private": true,
   "dependencies": {
